@@ -1,4 +1,4 @@
-Hi! I'm Connor West, a sophomore student at UIC studying computer science. I'm interested in software engineering and app development and am currently learning everything I can about java and react.
-
+Hi! I'm Connor West, a junior at the University of Illinois at Chicago.
+Please check out my latest project, created for the SparkHacks 2025 hackathon -> https://github.com/westconn24/garden-app
 Reach me at my email address westconn24@gmail.com!
 
