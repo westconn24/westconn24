@@ -1,4 +1,4 @@
-Hi! I'm Connor West, a junior at the University of Illinois at Chicago.
+Hi! I'm Connor West, a senior at the University of Illinois at Chicago.
 
 Please check out my latest project, created for the SparkHacks 2025 hackathon -> https://github.com/westconn24/garden-app
 
