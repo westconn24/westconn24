@@ -38,6 +38,7 @@ for date in dates:
     }
 
     response = requests.get(search_url, headers=headers, params=params)
+    print(f"  API status: {response.status_code}, total_count: {response.json().get('total_count', 'N/A')}, message: {response.json().get('message', 'none')}")
     data = response.json()
 
     total_additions = 0
