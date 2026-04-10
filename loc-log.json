@@ -1,17 +1,47 @@
 [
   {
     "date": "2026-04-03",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "prs": []
+    "additions": 16744,
+    "deletions": 7970,
+    "net": 8774,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 4,
+        "title": "Epic 2: Infrastructure & DevOps",
+        "additions": 16744,
+        "deletions": 7970
+      }
+    ]
   },
   {
     "date": "2026-04-04",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "prs": []
+    "additions": 43438,
+    "deletions": 22771,
+    "net": 20667,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 5,
+        "title": "Prototyping v1 + CI improvements",
+        "additions": 19832,
+        "deletions": 10909
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 4,
+        "title": "Post Gary feedback prototyping",
+        "additions": 19830,
+        "deletions": 10907
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 3,
+        "title": "Frontend brand redesign \u2014 hero, map, filters, record detail, landing pages",
+        "additions": 3776,
+        "deletions": 955
+      }
+    ]
   },
   {
     "date": "2026-04-05",
@@ -22,30 +52,216 @@
   },
   {
     "date": "2026-04-06",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "prs": []
+    "additions": 18342,
+    "deletions": 154,
+    "net": 18188,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 7,
+        "title": "Merge dev into main \u2014 Epic 00 System Architecture",
+        "additions": 9175,
+        "deletions": 79
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 6,
+        "title": "Epic 00: System Architecture \u2014 backend infrastructure",
+        "additions": 9167,
+        "deletions": 75
+      }
+    ]
   },
   {
     "date": "2026-04-07",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "prs": []
+    "additions": 23513,
+    "deletions": 3578,
+    "net": 19935,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 15,
+        "title": "Merge staging into dev",
+        "additions": 11776,
+        "deletions": 1792
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 14,
+        "title": "fix: resolve 35 audit issues \u2014 consolidated integration of PRs #8-#13",
+        "additions": 11737,
+        "deletions": 1786
+      }
+    ]
   },
   {
     "date": "2026-04-08",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "prs": []
+    "additions": 18336,
+    "deletions": 2466,
+    "net": 15870,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 32,
+        "title": "add: deployment safety CI + Heroku/Vercel deployment guide",
+        "additions": 524,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 31,
+        "title": "fix: route mock data through Next.js, auth through Django proxy",
+        "additions": 14,
+        "deletions": 11
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 30,
+        "title": "fix: enable mock data routes in production",
+        "additions": 8,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 29,
+        "title": "fix: update cookie path test assertion",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 28,
+        "title": "fix: cookie path / so auth middleware works + QA widget",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 27,
+        "title": "fix: QA widget shows by default + login works",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 26,
+        "title": "chore: redeploy with clean env vars",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 25,
+        "title": "fix: API_BASE defaults to same-origin proxy, not localhost",
+        "additions": 5,
+        "deletions": 4
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 24,
+        "title": "fix: revert GDAL cache action \u2014 missing libblas",
+        "additions": 2,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 23,
+        "title": "fix: Redis DB 0 + correct BACKEND_URL for Heroku",
+        "additions": 64,
+        "deletions": 9
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 22,
+        "title": "chore: trigger redeploy with BACKEND_URL",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 21,
+        "title": "fix: correct cache-apt-pkgs-action repo name",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 20,
+        "title": "ci: cache GDAL apt packages for faster CI",
+        "additions": 6,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 19,
+        "title": "fix: replace runtime.txt with .python-version for Heroku uv",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 18,
+        "title": "fix: remove requirements.txt for Heroku uv.lock",
+        "additions": 0,
+        "deletions": 144
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 17,
+        "title": "ci: remove Django System Checks job",
+        "additions": 0,
+        "deletions": 35
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 16,
+        "title": "Release: audit fixes, feedback widget, deployment config",
+        "additions": 16956,
+        "deletions": 2241
+      },
+      {
+        "repo": "Benmore-Studio/Benmore-Meridian",
+        "pr": 36,
+        "title": "Add better-scope-gen skill",
+        "additions": 748,
+        "deletions": 2
+      }
+    ]
   },
   {
     "date": "2026-04-09",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "prs": []
+    "additions": 28754,
+    "deletions": 137379,
+    "net": -108625,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 34,
+        "title": "feat: filter sidebar overhaul, QA feedback tool, and deployment fixes",
+        "additions": 4318,
+        "deletions": 68299
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 33,
+        "title": "feat(filters): 3-tab filter architecture with expanded field sets",
+        "additions": 2300,
+        "deletions": 67908
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 6,
+        "title": "refactor: make platform state-agnostic with nationwide credential support",
+        "additions": 9466,
+        "deletions": 640
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 5,
+        "title": "fix: auth fixes, role selection, QA tool upgrade, and deploy config",
+        "additions": 12670,
+        "deletions": 532
+      }
+    ]
   }
 ]
