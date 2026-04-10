@@ -1,31 +1,31 @@
 [
   {
     "date": "2026-03-11",
-    "additions": 25498,
+    "additions": 20596,
     "deletions": 3147,
-    "net": 22351,
+    "net": 17449,
     "prs": [
       {
         "repo": "Benmore-Studio/165-CallAssist",
         "pr": 25,
         "title": "feat: M3-M5 complete \u2014 Lead Management, Twilio Voice, and Dialer UI",
-        "additions": 25498,
+        "additions": 20596,
         "deletions": 3147
       }
     ]
   },
   {
     "date": "2026-03-12",
-    "additions": 467,
-    "deletions": 89,
-    "net": 378,
+    "additions": 239,
+    "deletions": 8,
+    "net": 231,
     "prs": [
       {
         "repo": "Benmore-Studio/165-CallAssist",
         "pr": 45,
         "title": "docs: add local startup scripts and rewrite README for client setup",
-        "additions": 467,
-        "deletions": 89
+        "additions": 239,
+        "deletions": 8
       }
     ]
   },
@@ -38,16 +38,16 @@
   },
   {
     "date": "2026-03-14",
-    "additions": 1428,
-    "deletions": 1,
-    "net": 1427,
+    "additions": 742,
+    "deletions": 0,
+    "net": 742,
     "prs": [
       {
         "repo": "Benmore-Studio/Benmore-Meridian",
         "pr": 23,
         "title": "feat: add creating-user-flows skill",
-        "additions": 1428,
-        "deletions": 1
+        "additions": 742,
+        "deletions": 0
       }
     ]
   },
@@ -74,15 +74,15 @@
   },
   {
     "date": "2026-03-18",
-    "additions": 6225,
+    "additions": 3126,
     "deletions": 145,
-    "net": 6080,
+    "net": 2981,
     "prs": [
       {
         "repo": "Benmore-Studio/165-CallAssist",
         "pr": 50,
         "title": "M6: SMS System \u2014 inbound/outbound messaging, templates, frontend UI",
-        "additions": 6225,
+        "additions": 3126,
         "deletions": 145
       }
     ]
@@ -131,30 +131,30 @@
   },
   {
     "date": "2026-03-25",
-    "additions": 34161,
+    "additions": 31071,
     "deletions": 1452,
-    "net": 32709,
+    "net": 29619,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 1,
         "title": "Brand redesign + TailwindCSS 4 upgrade + frontend prototype",
-        "additions": 34161,
+        "additions": 31071,
         "deletions": 1452
       }
     ]
   },
   {
     "date": "2026-03-26",
-    "additions": 84835,
+    "additions": 0,
     "deletions": 0,
-    "net": 84835,
+    "net": 0,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 2,
         "title": "docs: add discovery deliverables, epics, user flows, and project docu\u2026",
-        "additions": 84835,
+        "additions": 0,
         "deletions": 0
       }
     ]
@@ -175,16 +175,16 @@
   },
   {
     "date": "2026-03-29",
-    "additions": 384,
-    "deletions": 1206,
-    "net": -822,
+    "additions": 318,
+    "deletions": 1134,
+    "net": -816,
     "prs": [
       {
         "repo": "Benmore-Studio/Benmore-Meridian",
         "pr": 29,
         "title": "Update feature-alignment skill v2",
-        "additions": 384,
-        "deletions": 1206
+        "additions": 318,
+        "deletions": 1134
       }
     ]
   },
@@ -204,81 +204,81 @@
   },
   {
     "date": "2026-04-01",
-    "additions": 31088,
-    "deletions": 576,
-    "net": 30512,
+    "additions": 20429,
+    "deletions": 141,
+    "net": 20288,
     "prs": [
       {
         "repo": "Benmore-Studio/149-MediationToday",
         "pr": 1,
         "title": "Frontend mockups and documentation for Month 1 prototype",
-        "additions": 31088,
-        "deletions": 576
+        "additions": 20429,
+        "deletions": 141
       }
     ]
   },
   {
     "date": "2026-04-02",
-    "additions": 27432,
-    "deletions": 1554,
-    "net": 25878,
+    "additions": 13210,
+    "deletions": 874,
+    "net": 12336,
     "prs": [
       {
         "repo": "Benmore-Studio/149-MediationToday",
         "pr": 3,
         "title": "Epic 1: Accounts & Authentication \u2014 full backend + frontend wiring",
-        "additions": 13716,
-        "deletions": 777
+        "additions": 6605,
+        "deletions": 437
       },
       {
         "repo": "Benmore-Studio/149-MediationToday",
         "pr": 2,
         "title": "Epic 1: Accounts & Authentication",
-        "additions": 13716,
-        "deletions": 777
+        "additions": 6605,
+        "deletions": 437
       }
     ]
   },
   {
     "date": "2026-04-03",
-    "additions": 16744,
+    "additions": 14003,
     "deletions": 7970,
-    "net": 8774,
+    "net": 6033,
     "prs": [
       {
         "repo": "Benmore-Studio/149-MediationToday",
         "pr": 4,
         "title": "Epic 2: Infrastructure & DevOps",
-        "additions": 16744,
+        "additions": 14003,
         "deletions": 7970
       }
     ]
   },
   {
     "date": "2026-04-04",
-    "additions": 43438,
-    "deletions": 22771,
-    "net": 20667,
+    "additions": 3113,
+    "deletions": 1010,
+    "net": 2103,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 5,
         "title": "Prototyping v1 + CI improvements",
-        "additions": 19832,
-        "deletions": 10909
+        "additions": 398,
+        "deletions": 29
       },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 4,
         "title": "Post Gary feedback prototyping",
-        "additions": 19830,
-        "deletions": 10907
+        "additions": 390,
+        "deletions": 26
       },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 3,
         "title": "Frontend brand redesign \u2014 hero, map, filters, record detail, landing pages",
-        "additions": 3776,
+        "additions": 2325,
         "deletions": 955
       }
     ]
@@ -292,59 +292,59 @@
   },
   {
     "date": "2026-04-06",
-    "additions": 18342,
-    "deletions": 154,
-    "net": 18188,
+    "additions": 10942,
+    "deletions": 136,
+    "net": 10806,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 7,
         "title": "Merge dev into main \u2014 Epic 00 System Architecture",
-        "additions": 9175,
-        "deletions": 79
+        "additions": 5475,
+        "deletions": 70
       },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 6,
         "title": "Epic 00: System Architecture \u2014 backend infrastructure",
-        "additions": 9167,
-        "deletions": 75
+        "additions": 5467,
+        "deletions": 66
       }
     ]
   },
   {
     "date": "2026-04-07",
-    "additions": 23513,
-    "deletions": 3578,
-    "net": 19935,
+    "additions": 14265,
+    "deletions": 3574,
+    "net": 10691,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 15,
         "title": "Merge staging into dev",
-        "additions": 11776,
-        "deletions": 1792
+        "additions": 7152,
+        "deletions": 1790
       },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 14,
         "title": "fix: resolve 35 audit issues \u2014 consolidated integration of PRs #8-#13",
-        "additions": 11737,
-        "deletions": 1786
+        "additions": 7113,
+        "deletions": 1784
       }
     ]
   },
   {
     "date": "2026-04-08",
-    "additions": 18336,
-    "deletions": 2466,
-    "net": 15870,
+    "additions": 12296,
+    "deletions": 2265,
+    "net": 10031,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 32,
         "title": "add: deployment safety CI + Heroku/Vercel deployment guide",
-        "additions": 524,
+        "additions": 52,
         "deletions": 0
       },
       {
@@ -436,14 +436,14 @@
         "pr": 19,
         "title": "fix: replace runtime.txt with .python-version for Heroku uv",
         "additions": 1,
-        "deletions": 1
+        "deletions": 0
       },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 18,
         "title": "fix: remove requirements.txt for Heroku uv.lock",
         "additions": 0,
-        "deletions": 144
+        "deletions": 0
       },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
@@ -456,51 +456,51 @@
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 16,
         "title": "Release: audit fixes, feedback widget, deployment config",
-        "additions": 16956,
-        "deletions": 2241
+        "additions": 12136,
+        "deletions": 2187
       },
       {
         "repo": "Benmore-Studio/Benmore-Meridian",
         "pr": 36,
         "title": "Add better-scope-gen skill",
-        "additions": 748,
-        "deletions": 2
+        "additions": 0,
+        "deletions": 0
       }
     ]
   },
   {
     "date": "2026-04-09",
-    "additions": 28754,
-    "deletions": 137379,
-    "net": -108625,
+    "additions": 24785,
+    "deletions": 1839,
+    "net": 22946,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 34,
         "title": "feat: filter sidebar overhaul, QA feedback tool, and deployment fixes",
-        "additions": 4318,
-        "deletions": 68299
+        "additions": 2601,
+        "deletions": 406
       },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "pr": 33,
         "title": "feat(filters): 3-tab filter architecture with expanded field sets",
-        "additions": 2300,
-        "deletions": 67908
+        "additions": 104,
+        "deletions": 265
       },
       {
         "repo": "Benmore-Studio/149-MediationToday",
         "pr": 6,
         "title": "refactor: make platform state-agnostic with nationwide credential support",
-        "additions": 9466,
+        "additions": 9423,
         "deletions": 640
       },
       {
         "repo": "Benmore-Studio/149-MediationToday",
         "pr": 5,
         "title": "fix: auth fixes, role selection, QA tool upgrade, and deploy config",
-        "additions": 12670,
-        "deletions": 532
+        "additions": 12657,
+        "deletions": 528
       }
     ]
   }
