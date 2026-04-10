@@ -30,7 +30,7 @@ jobs:
       - name: Track LOC from merged PRs
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-          DAYS_BACK: ${{ github.event.inputs.days_back || '1' }}
+          DAYS_BACK: ${{ github.event.inputs.days_back || (hashFiles('loc-log.json') == '' && '30' || '1') }}
         run: python scripts/track_loc.py
 
       - name: Commit log update
