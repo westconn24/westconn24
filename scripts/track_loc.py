@@ -4,8 +4,11 @@ import os
 from datetime import datetime, timedelta, timezone
 
 USERNAME = "westconn24"
-TOKEN = os.environ.get("GH_PAT") or os.environ.get("GITHUB_TOKEN")
+PAT = os.environ.get("GH_PAT")
+TOKEN = PAT or os.environ.get("GITHUB_TOKEN")
 DAYS_BACK = int(os.environ.get("DAYS_BACK", "1"))
+
+print(f"Using GH_PAT: {'YES' if PAT else 'NO — falling back to GITHUB_TOKEN (private repos will be invisible)'}")
 
 headers = {
     "Authorization": f"token {TOKEN}",
