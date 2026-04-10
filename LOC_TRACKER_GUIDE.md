@@ -2,29 +2,28 @@
 
 ## What Is This?
 
-A lightweight system that automatically tracks every developer's lines of code output per day by scanning merged GitHub pull requests. Numbers update every morning. No manual effort after setup.
+A system that automatically tracks each developer's lines of code output per day by scanning merged GitHub pull requests. Numbers update every morning. No manual effort after setup.
 
-Tracks:
-- Lines added and deleted per day
-- Which PRs and repos the work came from
+**What it tracks:**
+- Lines added and deleted per day, per PR
 - Code only — `.md`, `.rst`, `.txt`, `.csv` files excluded
-- Refactor-heavy PRs automatically filtered out (>15k deletions)
+- Refactor-heavy PRs automatically filtered (>15k deletions ignored by default)
 
-**Privacy:** Data is stored in each developer's private `loc-data` repo. Only accessible to people with a GitHub PAT.
+**Privacy:** Data lives in each developer's private `{username}/loc-data` repo. Only accessible to people with a GitHub PAT that has `repo` scope.
 
 ---
 
 ## How It Works
 
 1. A GitHub Action runs in each developer's private `{username}/loc-data` repo every morning at 6 AM UTC
-2. It scans all PRs they merged the previous day across every repo they have access to
-3. Fetches file-level stats to exclude doc/data files
-4. Saves results to `loc-log.json` in their private `loc-data` repo
+2. It scans all their merged PRs from the previous day across every repo they have access to
+3. Fetches file-level stats to strip out doc/data files
+4. Saves results to `loc-log.json` in the private `loc-data` repo
 5. The CLI (`loc.py`) reads that file using a PAT — only authorized people can view it
 
 ---
 
-## Setup (Per Developer — ~5 min)
+## Fresh Setup (New Developer — ~5 min)
 
 ### Step 1 — Create a PAT
 
@@ -43,7 +42,7 @@ gh repo create YOUR_USERNAME/loc-data --private
 ### Step 3 — Copy the tracker files into it
 
 ```bash
-gh repo clone YOUR_USERNAME/loc-data ~/loc-data && cd ~/loc-data
+gh repo clone YOUR_USERNAME/loc-data ~/YOUR_USERNAME-loc-data && cd ~/YOUR_USERNAME-loc-data
 mkdir -p scripts .github/workflows
 curl -o scripts/track_loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_loc.py
 curl -o .github/workflows/track-loc.yml https://raw.githubusercontent.com/westconn24/westconn24/main/.github/workflows/track-loc.yml
@@ -52,7 +51,7 @@ git commit -m "Add LOC tracker"
 git push
 ```
 
-### Step 4 — Add your PAT as a secret
+### Step 4 — Add your PAT as a secret in `loc-data`
 
 Go to: `github.com/YOUR_USERNAME/loc-data/settings/secrets/actions`
 
@@ -62,52 +61,81 @@ Click **New repository secret**
 
 Click **Add secret**
 
-### Step 5 — Run it for the first time
+### Step 5 — Run the workflow
 
-Go to: `github.com/YOUR_USERNAME/loc-data/actions`
-
-Click **Track Daily LOC from PRs** → **Run workflow** → **Run workflow**
-
-It automatically backfills the last 30 days. Takes ~1–2 minutes.
-
-### Step 6 — Add token to your shell
-
-Add to `~/.zshrc`:
 ```bash
-export GH_LOC_TOKEN=ghp_your_token_here
+gh workflow run track-loc.yml --repo YOUR_USERNAME/loc-data --field days_back=30
 ```
-Then run `source ~/.zshrc`
+
+It backfills the last 30 days automatically. Takes ~1–2 minutes.
+
+### Step 6 — Add token and CLI to your shell
+
+```bash
+# Add token to shell (replace with your actual token)
+echo 'export GH_LOC_TOKEN=ghp_your_token_here' >> ~/.zshrc && source ~/.zshrc
+
+# Install the CLI
+curl -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/loc.py
+```
+
+---
+
+## Migration Setup (Already had old tracker in profile repo)
+
+If you previously set up the tracker in your `{username}/{username}` profile repo, run these commands to migrate to the new private `loc-data` setup:
+
+```bash
+# 1. Create the private loc-data repo
+gh repo create YOUR_USERNAME/loc-data --private
+
+# 2. Clone it and copy the updated tracker files
+gh repo clone YOUR_USERNAME/loc-data ~/YOUR_USERNAME-loc-data && cd ~/YOUR_USERNAME-loc-data
+mkdir -p scripts .github/workflows
+curl -o scripts/track_loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_loc.py
+curl -o .github/workflows/track-loc.yml https://raw.githubusercontent.com/westconn24/westconn24/main/.github/workflows/track-loc.yml
+git add scripts/track_loc.py .github/workflows/track-loc.yml
+git commit -m "Add LOC tracker"
+git push
+
+# 3. Add GH_PAT secret to loc-data
+# Go to: github.com/YOUR_USERNAME/loc-data/settings/secrets/actions → New secret → Name: GH_PAT
+
+# 4. Run the 30-day backfill
+gh workflow run track-loc.yml --repo YOUR_USERNAME/loc-data --field days_back=30
+
+# 5. Add token to shell and update CLI
+echo 'export GH_LOC_TOKEN=ghp_your_token_here' >> ~/.zshrc && source ~/.zshrc
+curl -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/loc.py
+
+# 6. Remove old workflow from profile repo (cleanup)
+cd ~/ && gh repo clone YOUR_USERNAME/YOUR_USERNAME ~/YOUR_USERNAME-profile
+cd ~/YOUR_USERNAME-profile && rm -rf scripts .github
+git add -A && git commit -m "Remove old LOC tracker" && git push
+```
 
 ---
 
 ## Using the CLI
 
-### Install
-
 ```bash
-curl -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/loc.py
-```
-
-### Commands
-
-```bash
-# View your own stats (default: last 7 days)
+# Your stats — last 7 days (default)
 python3 ~/loc.py --user YOUR_USERNAME
 
 # Last 30 days
 python3 ~/loc.py --user YOUR_USERNAME --days 30
 
-# Just the summary, no daily breakdown
+# Summary only, no daily breakdown
 python3 ~/loc.py --user YOUR_USERNAME --week
 
-# See individual PRs per day
+# Show individual PRs per day
 python3 ~/loc.py --user YOUR_USERNAME -v
 
 # View someone else's stats
 python3 ~/loc.py --user ArkashJ
-python3 ~/loc.py --user westconn24
+python3 ~/loc.py --user aniture
 
-# Adjust the refactor filter (default 15k, use 0 for no filter)
+# Adjust the refactor filter (default 15k, 0 = no filter)
 python3 ~/loc.py --user YOUR_USERNAME --max-deletions 5000
 
 # Exclude a specific repo
@@ -138,9 +166,7 @@ Avg net/day         +13,619
 
 ---
 
-## Team Roster
-
-Once everyone is set up, check the whole team:
+## Viewing the Whole Team
 
 ```bash
 python3 ~/loc.py --user westconn24
@@ -148,21 +174,23 @@ python3 ~/loc.py --user ArkashJ
 python3 ~/loc.py --user aniture
 ```
 
+Note: you can only view someone's stats if your `GH_LOC_TOKEN` has `repo` scope access to their `loc-data` repo. Since all repos are under shared Benmore org membership this should work automatically.
+
 ---
 
 ## What It Doesn't Track
 
 - Direct pushes to main (no PR = no data)
-- Time spent reviewing other people's PRs
+- Time spent reviewing PRs
 - Design, planning, or async communication work
 
-Use this as a productivity signal — good for spotting gaps, not for ranking people.
+Use as a productivity signal — good for spotting gaps, not for ranking people.
 
 ---
 
 ## Maintenance
 
-- Runs automatically every morning, no action needed
+- Runs automatically every morning at 6 AM UTC — no action needed
 - PAT never expires if set to "No expiration"
-- If someone's numbers go to zero, their PAT likely expired — regenerate and update the `GH_PAT` secret in their `loc-data` repo
-- To backfill any date range: Actions → Run workflow → set `days_back`
+- If someone's numbers go to zero, their `GH_PAT` secret likely expired — regenerate at `github.com/settings/tokens` and update the secret in their `loc-data` repo
+- To manually backfill any range: `gh workflow run track-loc.yml --repo USERNAME/loc-data --field days_back=N`
