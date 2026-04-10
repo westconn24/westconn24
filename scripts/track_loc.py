@@ -52,11 +52,29 @@ for date in dates:
 
         if pr_response.status_code == 200:
             pr_data = pr_response.json()
-            additions = pr_data.get("additions", 0)
-            deletions = pr_data.get("deletions", 0)
+            repo_full_name = pr_data["base"]["repo"]["full_name"]
+
+            # Fetch files to exclude docs (.md, .rst, .txt)
+            EXCLUDE_EXTS = {".md", ".rst", ".txt"}
+            files_url = pr_url + "/files"
+            additions, deletions = 0, 0
+            page = 1
+            while True:
+                files_resp = requests.get(files_url, headers=headers, params={"per_page": 100, "page": page})
+                files = files_resp.json()
+                if not files:
+                    break
+                for f in files:
+                    ext = "." + f["filename"].rsplit(".", 1)[-1] if "." in f["filename"] else ""
+                    if ext.lower() not in EXCLUDE_EXTS:
+                        additions += f.get("additions", 0)
+                        deletions += f.get("deletions", 0)
+                if len(files) < 100:
+                    break
+                page += 1
+
             total_additions += additions
             total_deletions += deletions
-            repo_full_name = pr_data["base"]["repo"]["full_name"]
             prs_processed.append({
                 "repo": repo_full_name,
                 "pr": pr_number,
