@@ -91,7 +91,7 @@ def main():
     parser.add_argument("--days", type=int, default=7, help="How many days back to show (default: 7)")
     parser.add_argument("--week", action="store_true", help="Show summary only, no daily breakdown")
     parser.add_argument("--exclude", metavar="REPO", action="append", default=[], help="Exclude a repo (e.g. Benmore-Studio/162-AeroSleuth). Repeatable.")
-    parser.add_argument("--max-deletions", type=int, default=10000, metavar="N", help="Exclude PRs that delete more than N lines (default: 10000, use 0 to include all)")
+    parser.add_argument("--max-deletions", type=int, default=15000, metavar="N", help="Exclude PRs that delete more than N lines (default: 15000, use 0 to include all)")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show individual PRs per day")
     args = parser.parse_args()
 
