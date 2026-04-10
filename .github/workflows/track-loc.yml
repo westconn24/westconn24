@@ -37,6 +37,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git pull --rebase origin main
           git add loc-log.json
           git diff --staged --quiet || git commit -m "LOC update: $(date -u '+%Y-%m-%d') (${DAYS_BACK:-1}d)"
           git push
