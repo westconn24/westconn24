@@ -12,22 +12,31 @@ Usage:
 
 import argparse
 import json
+import os
 import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
 DEFAULT_USER = "westconn24"
-RAW_URL = "https://raw.githubusercontent.com/{user}/{user}/main/loc-log.json"
+API_URL = "https://api.github.com/repos/{user}/{user}/contents/loc-log.json"
 
 
-def fetch_log(user):
-    url = RAW_URL.format(user=user)
+def fetch_log(user, token=None):
+    import base64
+    url = API_URL.format(user=user)
+    req = urllib.request.Request(url)
+    req.add_header("Accept", "application/vnd.github.v3+json")
+    if token:
+        req.add_header("Authorization", f"token {token}")
     try:
-        with urllib.request.urlopen(url) as r:
-            return json.loads(r.read())
+        with urllib.request.urlopen(req) as r:
+            data = json.loads(r.read())
+            return json.loads(base64.b64decode(data["content"]))
     except urllib.error.HTTPError as e:
         if e.code == 404:
             raise SystemExit(f"No loc-log.json found for '{user}'. They need to set up the tracker first.")
+        if e.code == 401:
+            raise SystemExit("Repo is private. Set GH_LOC_TOKEN env var or pass --token.")
         raise
 
 
@@ -88,6 +97,7 @@ def print_summary(entries):
 def main():
     parser = argparse.ArgumentParser(description="GitHub LOC tracker")
     parser.add_argument("--user", "-u", default=DEFAULT_USER, help=f"GitHub username to pull stats for (default: {DEFAULT_USER})")
+    parser.add_argument("--token", "-t", default=os.environ.get("GH_LOC_TOKEN"), help="GitHub PAT for private repos (or set GH_LOC_TOKEN env var)")
     parser.add_argument("--days", type=int, default=7, help="How many days back to show (default: 7)")
     parser.add_argument("--week", action="store_true", help="Show summary only, no daily breakdown")
     parser.add_argument("--exclude", metavar="REPO", action="append", default=[], help="Exclude a repo (e.g. Benmore-Studio/162-AeroSleuth). Repeatable.")
@@ -96,7 +106,7 @@ def main():
     args = parser.parse_args()
 
     print("Fetching data...", end="\r")
-    log = fetch_log(args.user)
+    log = fetch_log(args.user, token=args.token)
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=args.days)).strftime("%Y-%m-%d")
     max_del = None if args.max_deletions == 0 else args.max_deletions
