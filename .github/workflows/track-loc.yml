@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 6 * * *'  # 6 AM UTC daily
   workflow_dispatch:
+    inputs:
+      days_back:
+        description: 'How many days back to process (default: 1 = yesterday)'
+        required: false
+        default: '1'
 
 jobs:
   track-loc:
@@ -25,6 +30,7 @@ jobs:
       - name: Track LOC from merged PRs
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
+          DAYS_BACK: ${{ github.event.inputs.days_back || '1' }}
         run: python scripts/track_loc.py
 
       - name: Commit log update
@@ -32,5 +38,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add loc-log.json
-          git diff --staged --quiet || git commit -m "LOC update: $(date -u '+%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "LOC update: $(date -u '+%Y-%m-%d') (${DAYS_BACK:-1}d)"
           git push
