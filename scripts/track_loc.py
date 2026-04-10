@@ -46,12 +46,8 @@ for date in dates:
     prs_processed = []
 
     for item in data.get("items", []):
-        parts = item["url"].split("/")
-        owner = parts[5]
-        repo = parts[6]
         pr_number = item["number"]
-
-        pr_url = f"https://api.github.com/repos/{owner}/{repo}/pulls/{pr_number}"
+        pr_url = item["url"].replace("/issues/", "/pulls/")
         pr_response = requests.get(pr_url, headers=headers)
 
         if pr_response.status_code == 200:
@@ -60,14 +56,15 @@ for date in dates:
             deletions = pr_data.get("deletions", 0)
             total_additions += additions
             total_deletions += deletions
+            repo_full_name = pr_data["base"]["repo"]["full_name"]
             prs_processed.append({
-                "repo": f"{owner}/{repo}",
+                "repo": repo_full_name,
                 "pr": pr_number,
                 "title": item["title"],
                 "additions": additions,
                 "deletions": deletions
             })
-            print(f"  PR #{pr_number} in {owner}/{repo}: +{additions} -{deletions}")
+            print(f"  PR #{pr_number} in {repo_full_name}: +{additions} -{deletions}")
 
     if not prs_processed:
         print("  No merged PRs found")
