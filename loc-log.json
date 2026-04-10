@@ -1,18 +1,10 @@
 [
   {
     "date": "2026-03-11",
-    "additions": 20596,
-    "deletions": 3147,
-    "net": 17449,
-    "prs": [
-      {
-        "repo": "Benmore-Studio/165-CallAssist",
-        "pr": 25,
-        "title": "feat: M3-M5 complete \u2014 Lead Management, Twilio Voice, and Dialer UI",
-        "additions": 20596,
-        "deletions": 3147
-      }
-    ]
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
   },
   {
     "date": "2026-03-12",
@@ -470,9 +462,9 @@
   },
   {
     "date": "2026-04-09",
-    "additions": 24785,
+    "additions": 24593,
     "deletions": 1839,
-    "net": 22946,
+    "net": 22754,
     "prs": [
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
@@ -492,7 +484,7 @@
         "repo": "Benmore-Studio/149-MediationToday",
         "pr": 6,
         "title": "refactor: make platform state-agnostic with nationwide credential support",
-        "additions": 9423,
+        "additions": 9231,
         "deletions": 640
       },
       {
