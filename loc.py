@@ -36,10 +36,12 @@ def format_num(n):
     return f"{sign}{n:,}"
 
 
-def filter_prs(entry, exclude_repos):
-    if not exclude_repos:
-        return entry
-    prs = [p for p in entry["prs"] if p["repo"] not in exclude_repos]
+def filter_prs(entry, exclude_repos, max_deletions):
+    prs = entry["prs"]
+    if exclude_repos:
+        prs = [p for p in prs if p["repo"] not in exclude_repos]
+    if max_deletions is not None:
+        prs = [p for p in prs if p["deletions"] <= max_deletions]
     return {
         **entry,
         "additions": sum(p["additions"] for p in prs),
@@ -89,6 +91,7 @@ def main():
     parser.add_argument("--days", type=int, default=7, help="How many days back to show (default: 7)")
     parser.add_argument("--week", action="store_true", help="Show summary only, no daily breakdown")
     parser.add_argument("--exclude", metavar="REPO", action="append", default=[], help="Exclude a repo (e.g. Benmore-Studio/162-AeroSleuth). Repeatable.")
+    parser.add_argument("--max-deletions", type=int, default=10000, metavar="N", help="Exclude PRs that delete more than N lines (default: 10000, use 0 to include all)")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show individual PRs per day")
     args = parser.parse_args()
 
@@ -96,7 +99,8 @@ def main():
     log = fetch_log(args.user)
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=args.days)).strftime("%Y-%m-%d")
-    entries = [filter_prs(e, args.exclude) for e in log if e["date"] >= cutoff]
+    max_del = None if args.max_deletions == 0 else args.max_deletions
+    entries = [filter_prs(e, args.exclude, max_del) for e in log if e["date"] >= cutoff]
 
     if not entries:
         print("No data found for that range.")
