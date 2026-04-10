@@ -8,7 +8,6 @@ PAT = os.environ.get("GH_PAT")
 TOKEN = PAT or os.environ.get("GITHUB_TOKEN")
 DAYS_BACK = int(os.environ.get("DAYS_BACK", "1"))
 
-print(f"Using GH_PAT: {'YES' if PAT else 'NO — falling back to GITHUB_TOKEN (private repos will be invisible)'}")
 
 headers = {
     "Authorization": f"token {TOKEN}",
@@ -38,7 +37,6 @@ for date in dates:
     }
 
     response = requests.get(search_url, headers=headers, params=params)
-    print(f"  API status: {response.status_code}, total_count: {response.json().get('total_count', 'N/A')}, message: {response.json().get('message', 'none')}")
     data = response.json()
 
     total_additions = 0
