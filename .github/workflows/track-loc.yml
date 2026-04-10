@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       days_back:
-        description: 'How many days back to process (default: 1 = yesterday)'
+        description: 'How many days back to process (default: 30)'
         required: false
-        default: '1'
+        default: '30'
 
 jobs:
   track-loc:
