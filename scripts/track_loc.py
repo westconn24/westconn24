@@ -55,7 +55,7 @@ for date in dates:
             repo_full_name = pr_data["base"]["repo"]["full_name"]
 
             # Fetch files to exclude docs (.md, .rst, .txt)
-            EXCLUDE_EXTS = {".md", ".rst", ".txt"}
+            EXCLUDE_EXTS = {".md", ".rst", ".txt", ".csv"}
             files_url = pr_url + "/files"
             additions, deletions = 0, 0
             page = 1
