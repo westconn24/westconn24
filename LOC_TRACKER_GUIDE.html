@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benmore LOC Tracker — Team Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 25%, #0f2d4a 50%, #1a3a5c 75%, #0d1a2d 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 60px 30px;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 54px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(96,165,250,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 0%, #60a5fa 50%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        .version-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, rgba(96,165,250,0.2) 0%, rgba(96,165,250,0.1) 100%);
+            border: 1px solid rgba(96,165,250,0.3);
+            border-radius: 20px;
+            font-size: 0.82rem;
+            color: #60a5fa;
+            margin-top: 16px;
+        }
+
+        /* Sections */
+        .section { margin-bottom: 44px; }
+
+        .section-header {
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #60a5fa;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-header::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(96,165,250,0.4) 0%, rgba(96,165,250,0.1) 50%, transparent 100%);
+        }
+
+        /* Grid layout */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+        }
+
+        /* Base Card (Blue) */
+        .card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(96,165,250,0.3) 50%, transparent 100%);
+        }
+
+        .card h3 { font-size: 1.15rem; font-weight: 600; color: #60a5fa; margin-bottom: 14px; }
+        .card h4 { font-size: 1rem; font-weight: 500; color: #93c5fd; margin-bottom: 10px; margin-top: 18px; }
+        .card h4:first-of-type { margin-top: 0; }
+        .card p { color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+        .card p:last-child { margin-bottom: 0; }
+
+        /* Feature Card (Green) */
+        .feature-card {
+            background: linear-gradient(135deg, rgba(52,211,153,0.08) 0%, rgba(16,185,129,0.03) 100%);
+            border: 1px solid rgba(52,211,153,0.2);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 { color: #34d399; font-size: 1.15rem; font-weight: 600; margin-bottom: 14px; }
+        .feature-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
+        .feature-card p:last-child { margin-bottom: 0; }
+
+        /* Warning Card (Amber) */
+        .warning-card {
+            background: linear-gradient(135deg, rgba(251,191,36,0.08) 0%, rgba(245,158,11,0.03) 100%);
+            border: 1px solid rgba(251,191,36,0.2);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+        }
+        .warning-card h3 { color: #fbbf24; font-size: 1.15rem; font-weight: 600; margin-bottom: 14px; }
+        .warning-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
+        .warning-card p:last-child { margin-bottom: 0; }
+
+        /* Error Card (Red) */
+        .error-card {
+            background: linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(220,38,38,0.03) 100%);
+            border: 1px solid rgba(239,68,68,0.2);
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+        }
+        .error-card h3 { color: #f87171; font-size: 1.15rem; font-weight: 600; margin-bottom: 14px; }
+        .error-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
+        .error-card p:last-child { margin-bottom: 0; }
+
+        /* Highlight Card */
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(96,165,250,0.12) 0%, rgba(96,165,250,0.05) 100%);
+            border-left: 3px solid #60a5fa;
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+        }
+        .highlight-card h3 { font-size: 1.1rem; font-weight: 600; color: #93c5fd; margin-bottom: 12px; }
+        .highlight-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
+        .highlight-card p:last-child { margin-bottom: 0; }
+
+        /* Lists */
+        ul, ol {
+            padding-left: 20px;
+            color: rgba(255,255,255,0.85);
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.65;
+        }
+
+        li strong { color: #93c5fd; font-weight: 600; }
+
+        /* Code blocks */
+        pre {
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 20px 24px;
+            overflow-x: auto;
+            margin: 14px 0 0;
+            font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.65;
+            color: #e2e8f0;
+        }
+
+        code {
+            font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(96,165,250,0.12);
+            border: 1px solid rgba(96,165,250,0.2);
+            border-radius: 4px;
+            padding: 2px 6px;
+            color: #93c5fd;
+        }
+
+        pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: #e2e8f0;
+            font-size: 1em;
+        }
+
+        /* Step number badges */
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .step-row:last-child { margin-bottom: 0; }
+
+        .step-content { flex: 1; }
+        .step-content h4 { color: #93c5fd; font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+        .step-content p { color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 10px; }
+        .step-content p:last-child { margin-bottom: 0; }
+
+        /* Output block */
+        .output-block {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(96,165,250,0.15);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-top: 14px;
+            font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+            font-size: 0.84rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            overflow-x: auto;
+            white-space: pre;
+        }
+
+        /* CLI Flag table */
+        .flag-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 20px;
+            margin-top: 12px;
+        }
+
+        .flag-key {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.82rem;
+            color: #60a5fa;
+            background: rgba(96,165,250,0.1);
+            border: 1px solid rgba(96,165,250,0.2);
+            border-radius: 5px;
+            padding: 3px 10px;
+            white-space: nowrap;
+            align-self: start;
+        }
+
+        .flag-desc {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            padding-top: 3px;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(96,165,250,0.25) 50%, transparent 100%);
+            margin: 40px 0;
+            position: relative;
+        }
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 40px;
+            background: radial-gradient(ellipse, rgba(96,165,250,0.08) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Benmore LOC Tracker</h1>
+        <div class="subtitle">Lines-of-Code Tracking System — Team Guide</div>
+        <div class="version-badge">Automated · Private · Zero Daily Effort</div>
+    </div>
+
+    <!-- Overview -->
+    <div class="section">
+        <div class="section-header">Overview</div>
+
+        <div class="highlight-card">
+            <h3>What It Does</h3>
+            <p>Automatically tracks each developer's lines of code output per day by scanning merged GitHub pull requests. Numbers update every morning with no manual effort after the initial setup.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="feature-card">
+                <h3>What It Tracks</h3>
+                <ul>
+                    <li>Lines added and deleted per day, per PR</li>
+                    <li>Code files only — <code>.md</code>, <code>.rst</code>, <code>.txt</code>, <code>.csv</code> excluded</li>
+                    <li>Refactor-heavy PRs filtered automatically (&gt;15k deletions ignored by default)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Privacy Model</h3>
+                <p>All data lives in each developer's private <code>{username}/loc-data</code> repo. Only accessible to people with a GitHub PAT that has <code>repo</code> scope.</p>
+            </div>
+
+            <div class="warning-card">
+                <h3>Use as a Signal</h3>
+                <p>Good for spotting productivity gaps. Not intended for ranking people — it does not capture review time, design, planning, or async communication work.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="section">
+        <div class="section-header">How It Works</div>
+
+        <div class="card">
+            <h3>Automated Pipeline</h3>
+            <div class="step-row">
+                <span class="step-num">1</span>
+                <div class="step-content">
+                    <h4>GitHub Action fires at 6 AM UTC</h4>
+                    <p>Runs inside each developer's private <code>{username}/loc-data</code> repo on a daily schedule.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <span class="step-num">2</span>
+                <div class="step-content">
+                    <h4>Scans all merged PRs from yesterday</h4>
+                    <p>Pulls data across every repo the developer has access to.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <span class="step-num">3</span>
+                <div class="step-content">
+                    <h4>Strips doc and data files</h4>
+                    <p>Fetches file-level stats to exclude non-code file types from the count.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <span class="step-num">4</span>
+                <div class="step-content">
+                    <h4>Saves results to <code>loc-log.json</code></h4>
+                    <p>Stored in the private <code>loc-data</code> repo — only reachable via authorized PAT.</p>
+                </div>
+            </div>
+            <div class="step-row">
+                <span class="step-num">5</span>
+                <div class="step-content">
+                    <h4>CLI reads the file on demand</h4>
+                    <p>Run <code>loc.py</code> locally — it fetches the JSON using your <code>GH_LOC_TOKEN</code> PAT.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Fresh Setup -->
+    <div class="section">
+        <div class="section-header">Fresh Setup — New Developer (~5 min)</div>
+
+        <div class="card">
+            <div class="step-row">
+                <span class="step-num">1</span>
+                <div class="step-content">
+                    <h4>Create a Personal Access Token (PAT)</h4>
+                    <p>Go to <code>github.com/settings/tokens</code> → <strong>Generate new token (classic)</strong></p>
+                    <ul>
+                        <li><strong>Note:</strong> <code>loc-tracker</code></li>
+                        <li><strong>Expiration:</strong> No expiration</li>
+                        <li><strong>Scope:</strong> check the <code>repo</code> box (top-level)</li>
+                        <li>Click <strong>Generate token</strong> → copy it (starts with <code>ghp_</code>)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <span class="step-num">2</span>
+                <div class="step-content">
+                    <h4>Create your private <code>loc-data</code> repo</h4>
+                    <pre><code>gh repo create YOUR_USERNAME/loc-data --private</code></pre>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <span class="step-num">3</span>
+                <div class="step-content">
+                    <h4>Copy the tracker files into it</h4>
+<pre><code>gh repo clone YOUR_USERNAME/loc-data ~/YOUR_USERNAME-loc-data && cd ~/YOUR_USERNAME-loc-data
+mkdir -p scripts .github/workflows
+curl -o scripts/track_loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_loc.py
+curl -o .github/workflows/track-loc.yml https://raw.githubusercontent.com/westconn24/westconn24/main/.github/workflows/track-loc.yml
+git add scripts/track_loc.py .github/workflows/track-loc.yml
+git commit -m "Add LOC tracker"
+git push</code></pre>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <span class="step-num">4</span>
+                <div class="step-content">
+                    <h4>Add your PAT as a repo secret</h4>
+                    <p>Go to: <code>github.com/YOUR_USERNAME/loc-data/settings/secrets/actions</code></p>
+                    <p>Click <strong>New repository secret</strong></p>
+                    <ul>
+                        <li><strong>Name:</strong> <code>GH_PAT</code></li>
+                        <li><strong>Value:</strong> paste the <code>ghp_...</code> token</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Click <strong>Add secret</strong></p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <span class="step-num">5</span>
+                <div class="step-content">
+                    <h4>Run the workflow — backfill last 30 days</h4>
+                    <pre><code>gh workflow run track-loc.yml --repo YOUR_USERNAME/loc-data --field days_back=30</code></pre>
+                    <p style="margin-top: 10px; color: rgba(255,255,255,0.55); font-size: 0.9rem;">Takes ~1–2 minutes to complete.</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <span class="step-num">6</span>
+                <div class="step-content">
+                    <h4>Add token and CLI to your shell</h4>
+<pre><code># Add token to shell (replace with your actual token)
+echo 'export GH_LOC_TOKEN=ghp_your_token_here' >> ~/.zshrc && source ~/.zshrc
+
+# Install the CLI
+curl -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/loc.py</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- CLI Reference -->
+    <div class="section">
+        <div class="section-header">CLI Reference</div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Flags</h3>
+                <div class="flag-grid">
+                    <span class="flag-key">--user USERNAME</span>
+                    <span class="flag-desc">Target developer — last 7 days by default</span>
+
+                    <span class="flag-key">--days 30</span>
+                    <span class="flag-desc">Extend the lookback window</span>
+
+                    <span class="flag-key">--week</span>
+                    <span class="flag-desc">Summary only, no daily breakdown</span>
+
+                    <span class="flag-key">-v</span>
+                    <span class="flag-desc">Show individual PRs per day</span>
+
+                    <span class="flag-key">--max-deletions N</span>
+                    <span class="flag-desc">Refactor filter threshold (default 15000, 0 = off)</span>
+
+                    <span class="flag-key">--exclude REPO</span>
+                    <span class="flag-desc">Exclude a specific repo from totals</span>
+
+                    <span class="flag-key">--token ghp_...</span>
+                    <span class="flag-desc">Pass token explicitly instead of env var</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Viewing the Team</h3>
+                <pre><code>python3 ~/loc.py --user westconn24
+python3 ~/loc.py --user ArkashJ
+python3 ~/loc.py --user aniture</code></pre>
+                <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">You can view someone's stats as long as your <code>GH_LOC_TOKEN</code> has <code>repo</code> scope access to their <code>loc-data</code> repo. Shared Benmore org membership covers this automatically.</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 4px;">
+            <h3>Example Output</h3>
+            <div class="output-block">westconn24 — last 7 days
+
+Date               Added     Deleted           Net  PRs
+------------  ----------  ----------  ------------  ---
+2026-04-06  +  10,942  -     136  net    +10,806  (2 PRs)
+2026-04-07  +  14,265  -   3,574  net    +10,691  (2 PRs)
+2026-04-08  +  12,296  -   2,265  net    +10,031  (18 PRs)
+2026-04-09  +  24,785  -   1,839  net    +22,946  (4 PRs)
+
+Total added          62,288
+Total deleted         7,814
+Net                 +54,474
+Active days               4 of 7
+Avg net/day         +13,619</div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Maintenance -->
+    <div class="section">
+        <div class="section-header">Maintenance</div>
+
+        <div class="grid-2">
+            <div class="feature-card">
+                <h3>Zero Ongoing Effort</h3>
+                <ul>
+                    <li>Runs automatically every morning at <strong>6 AM UTC</strong> — no action needed</li>
+                    <li>PAT never expires if set to "No expiration" at creation time</li>
+                    <li>Manual backfill any range:<br><code>gh workflow run track-loc.yml --repo USERNAME/loc-data --field days_back=N</code></li>
+                </ul>
+            </div>
+
+            <div class="warning-card">
+                <h3>If Numbers Drop to Zero</h3>
+                <p>The developer's <code>GH_PAT</code> secret likely expired. To fix:</p>
+                <ul>
+                    <li>Regenerate the token at <code>github.com/settings/tokens</code></li>
+                    <li>Update the secret in their <code>loc-data</code> repo settings under <strong>Actions secrets</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Limitations -->
+    <div class="section">
+        <div class="section-header">Limitations</div>
+
+        <div class="error-card">
+            <h3>What It Does Not Track</h3>
+            <ul>
+                <li><strong>Direct pushes to main</strong> — no PR means no data captured</li>
+                <li><strong>Code review time</strong> — reviewing PRs is invisible to this system</li>
+                <li><strong>Design, planning, async communication</strong> — non-code contributions not captured</li>
+            </ul>
+            <p style="margin-top: 14px;">Use as a <strong>productivity signal</strong> — good for spotting gaps, not for ranking people.</p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
