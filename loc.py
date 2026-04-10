@@ -18,7 +18,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 
 DEFAULT_USER = "westconn24"
-API_URL = "https://api.github.com/repos/{user}/{user}/contents/loc-log.json"
+API_URL = "https://api.github.com/repos/{user}/loc-data/contents/loc-log.json"
 
 
 def fetch_log(user, token=None):
