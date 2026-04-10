@@ -12,15 +12,23 @@ Usage:
 
 import argparse
 import json
+import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
-RAW_URL = "https://raw.githubusercontent.com/westconn24/westconn24/main/loc-log.json"
+DEFAULT_USER = "westconn24"
+RAW_URL = "https://raw.githubusercontent.com/{user}/{user}/main/loc-log.json"
 
 
-def fetch_log():
-    with urllib.request.urlopen(RAW_URL) as r:
-        return json.loads(r.read())
+def fetch_log(user):
+    url = RAW_URL.format(user=user)
+    try:
+        with urllib.request.urlopen(url) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            raise SystemExit(f"No loc-log.json found for '{user}'. They need to set up the tracker first.")
+        raise
 
 
 def format_num(n):
@@ -76,7 +84,8 @@ def print_summary(entries):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="westconn24 LOC tracker")
+    parser = argparse.ArgumentParser(description="GitHub LOC tracker")
+    parser.add_argument("--user", "-u", default=DEFAULT_USER, help=f"GitHub username to pull stats for (default: {DEFAULT_USER})")
     parser.add_argument("--days", type=int, default=7, help="How many days back to show (default: 7)")
     parser.add_argument("--week", action="store_true", help="Show summary only, no daily breakdown")
     parser.add_argument("--exclude", metavar="REPO", action="append", default=[], help="Exclude a repo (e.g. Benmore-Studio/162-AeroSleuth). Repeatable.")
@@ -84,7 +93,7 @@ def main():
     args = parser.parse_args()
 
     print("Fetching data...", end="\r")
-    log = fetch_log()
+    log = fetch_log(args.user)
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=args.days)).strftime("%Y-%m-%d")
     entries = [filter_prs(e, args.exclude) for e in log if e["date"] >= cutoff]
@@ -94,7 +103,7 @@ def main():
         return
 
     exclude_note = f"  (excluding: {', '.join(args.exclude)})" if args.exclude else ""
-    print(f"\n  westconn24 — last {args.days} days{exclude_note}\n")
+    print(f"\n  {args.user} — last {args.days} days{exclude_note}\n")
     print(f"  {'Date':<12}  {'Added':>10}  {'Deleted':>10}  {'Net':>12}  PRs")
     print(f"  {'-'*12}  {'-'*10}  {'-'*10}  {'-'*12}  ---")
 

@@ -3,7 +3,9 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
-USERNAME = "westconn24"
+USERNAME = os.environ.get("GITHUB_REPOSITORY_OWNER") or os.environ.get("GH_USERNAME")
+if not USERNAME:
+    raise SystemExit("Could not determine GitHub username. Set GH_USERNAME env var.")
 PAT = os.environ.get("GH_PAT")
 TOKEN = PAT or os.environ.get("GITHUB_TOKEN")
 DAYS_BACK = int(os.environ.get("DAYS_BACK", "1"))
