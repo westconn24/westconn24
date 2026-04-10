@@ -1,5 +1,245 @@
 [
   {
+    "date": "2026-03-11",
+    "additions": 25498,
+    "deletions": 3147,
+    "net": 22351,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "pr": 25,
+        "title": "feat: M3-M5 complete \u2014 Lead Management, Twilio Voice, and Dialer UI",
+        "additions": 25498,
+        "deletions": 3147
+      }
+    ]
+  },
+  {
+    "date": "2026-03-12",
+    "additions": 467,
+    "deletions": 89,
+    "net": 378,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "pr": 45,
+        "title": "docs: add local startup scripts and rewrite README for client setup",
+        "additions": 467,
+        "deletions": 89
+      }
+    ]
+  },
+  {
+    "date": "2026-03-13",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-14",
+    "additions": 1428,
+    "deletions": 1,
+    "net": 1427,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/Benmore-Meridian",
+        "pr": 23,
+        "title": "feat: add creating-user-flows skill",
+        "additions": 1428,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-03-15",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-16",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-17",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-18",
+    "additions": 6225,
+    "deletions": 145,
+    "net": 6080,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "pr": 50,
+        "title": "M6: SMS System \u2014 inbound/outbound messaging, templates, frontend UI",
+        "additions": 6225,
+        "deletions": 145
+      }
+    ]
+  },
+  {
+    "date": "2026-03-19",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-20",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-21",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-22",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-23",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-24",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-25",
+    "additions": 34161,
+    "deletions": 1452,
+    "net": 32709,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 1,
+        "title": "Brand redesign + TailwindCSS 4 upgrade + frontend prototype",
+        "additions": 34161,
+        "deletions": 1452
+      }
+    ]
+  },
+  {
+    "date": "2026-03-26",
+    "additions": 84835,
+    "deletions": 0,
+    "net": 84835,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 2,
+        "title": "docs: add discovery deliverables, epics, user flows, and project docu\u2026",
+        "additions": 84835,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-03-27",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-28",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-29",
+    "additions": 384,
+    "deletions": 1206,
+    "net": -822,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/Benmore-Meridian",
+        "pr": 29,
+        "title": "Update feature-alignment skill v2",
+        "additions": 384,
+        "deletions": 1206
+      }
+    ]
+  },
+  {
+    "date": "2026-03-30",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-03-31",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-04-01",
+    "additions": 31088,
+    "deletions": 576,
+    "net": 30512,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 1,
+        "title": "Frontend mockups and documentation for Month 1 prototype",
+        "additions": 31088,
+        "deletions": 576
+      }
+    ]
+  },
+  {
+    "date": "2026-04-02",
+    "additions": 27432,
+    "deletions": 1554,
+    "net": 25878,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 3,
+        "title": "Epic 1: Accounts & Authentication \u2014 full backend + frontend wiring",
+        "additions": 13716,
+        "deletions": 777
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 2,
+        "title": "Epic 1: Accounts & Authentication",
+        "additions": 13716,
+        "deletions": 777
+      }
+    ]
+  },
+  {
     "date": "2026-04-03",
     "additions": 16744,
     "deletions": 7970,
