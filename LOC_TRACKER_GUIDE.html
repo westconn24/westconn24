@@ -22,7 +22,6 @@
 
         .container { max-width: 1100px; margin: 0 auto; }
 
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 54px;
@@ -72,7 +71,6 @@
             margin-top: 16px;
         }
 
-        /* Sections */
         .section { margin-bottom: 44px; }
 
         .section-header {
@@ -94,7 +92,6 @@
             background: linear-gradient(90deg, rgba(96,165,250,0.4) 0%, rgba(96,165,250,0.1) 50%, transparent 100%);
         }
 
-        /* Grid layout */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
 
@@ -103,7 +100,6 @@
             h1 { font-size: 2rem; }
         }
 
-        /* Base Card (Blue) */
         .card {
             background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
             border: 1px solid rgba(255,255,255,0.08);
@@ -129,7 +125,6 @@
         .card p { color: rgba(255,255,255,0.85); margin-bottom: 12px; }
         .card p:last-child { margin-bottom: 0; }
 
-        /* Feature Card (Green) */
         .feature-card {
             background: linear-gradient(135deg, rgba(52,211,153,0.08) 0%, rgba(16,185,129,0.03) 100%);
             border: 1px solid rgba(52,211,153,0.2);
@@ -141,7 +136,6 @@
         .feature-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
         .feature-card p:last-child { margin-bottom: 0; }
 
-        /* Warning Card (Amber) */
         .warning-card {
             background: linear-gradient(135deg, rgba(251,191,36,0.08) 0%, rgba(245,158,11,0.03) 100%);
             border: 1px solid rgba(251,191,36,0.2);
@@ -153,7 +147,6 @@
         .warning-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
         .warning-card p:last-child { margin-bottom: 0; }
 
-        /* Error Card (Red) */
         .error-card {
             background: linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(220,38,38,0.03) 100%);
             border: 1px solid rgba(239,68,68,0.2);
@@ -165,7 +158,6 @@
         .error-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
         .error-card p:last-child { margin-bottom: 0; }
 
-        /* Highlight Card */
         .highlight-card {
             background: linear-gradient(135deg, rgba(96,165,250,0.12) 0%, rgba(96,165,250,0.05) 100%);
             border-left: 3px solid #60a5fa;
@@ -177,7 +169,6 @@
         .highlight-card p { color: rgba(255,255,255,0.85); margin-bottom: 10px; }
         .highlight-card p:last-child { margin-bottom: 0; }
 
-        /* Lists */
         ul, ol {
             padding-left: 20px;
             color: rgba(255,255,255,0.85);
@@ -190,7 +181,6 @@
 
         li strong { color: #93c5fd; font-weight: 600; }
 
-        /* Code blocks */
         pre {
             background: rgba(0,0,0,0.35);
             border: 1px solid rgba(255,255,255,0.08);
@@ -222,7 +212,6 @@
             font-size: 1em;
         }
 
-        /* Step number badges */
         .step-num {
             display: inline-flex;
             align-items: center;
@@ -250,7 +239,6 @@
         .step-content p { color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 10px; }
         .step-content p:last-child { margin-bottom: 0; }
 
-        /* Output block */
         .output-block {
             background: rgba(0,0,0,0.4);
             border: 1px solid rgba(96,165,250,0.15);
@@ -265,7 +253,6 @@
             white-space: pre;
         }
 
-        /* CLI Flag table */
         .flag-grid {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -291,7 +278,6 @@
             padding-top: 3px;
         }
 
-        /* Divider */
         .divider {
             height: 1px;
             background: linear-gradient(90deg, transparent 0%, rgba(96,165,250,0.25) 50%, transparent 100%);
@@ -308,6 +294,28 @@
             height: 40px;
             background: radial-gradient(ellipse, rgba(96,165,250,0.08) 0%, transparent 70%);
         }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+        }
+        .compare-table th {
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #60a5fa;
+            border-bottom: 1px solid rgba(96,165,250,0.3);
+        }
+        .compare-table td {
+            padding: 10px 16px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table td:first-child { color: rgba(255,255,255,0.5); font-weight: 500; }
     </style>
 </head>
 <body>
@@ -317,7 +325,7 @@
     <div class="header">
         <h1>Benmore LOC Tracker</h1>
         <div class="subtitle">Lines-of-Code Tracking System — Team Guide</div>
-        <div class="version-badge">Automated · Private · Zero Daily Effort</div>
+        <div class="version-badge">Two Trackers · Automated · Private · Zero Daily Effort</div>
     </div>
 
     <!-- Overview -->
@@ -326,16 +334,22 @@
 
         <div class="highlight-card">
             <h3>What It Does</h3>
-            <p>Automatically tracks each developer's lines of code output per day by scanning merged GitHub pull requests. Numbers update every morning with no manual effort after the initial setup.</p>
+            <p>Automatically tracks each developer's lines of code output per day using two methods that run side by side:</p>
+            <ul>
+                <li><strong>PR Tracker</strong> (<code>loc.py</code>) — counts lines from merged pull requests</li>
+                <li><strong>Commit Tracker</strong> (<code>loctest.py</code>) — counts lines from every individual commit across all repos and branches</li>
+            </ul>
+            <p>Both run daily via a single GitHub Action. No manual effort after initial setup.</p>
         </div>
 
         <div class="grid-3">
             <div class="feature-card">
                 <h3>What It Tracks</h3>
                 <ul>
-                    <li>Lines added and deleted per day, per PR</li>
+                    <li>Lines added and deleted per day</li>
                     <li>Code files only — <code>.md</code>, <code>.rst</code>, <code>.txt</code>, <code>.csv</code> excluded</li>
-                    <li>Refactor-heavy PRs filtered automatically (&gt;15k deletions ignored by default)</li>
+                    <li>Refactor-heavy items filtered (&gt;15k deletions ignored by default)</li>
+                    <li>Merge commits excluded from commit tracker</li>
                 </ul>
             </div>
 
@@ -348,6 +362,51 @@
                 <h3>Use as a Signal</h3>
                 <p>Good for spotting productivity gaps. Not intended for ranking people — it does not capture review time, design, planning, or async communication work.</p>
             </div>
+        </div>
+    </div>
+
+    <!-- PR vs Commit Comparison -->
+    <div class="section">
+        <div class="section-header">PR Tracker vs Commit Tracker</div>
+
+        <div class="card">
+            <table class="compare-table">
+                <tr>
+                    <th></th>
+                    <th>PR Tracker (<code>loc.py</code>)</th>
+                    <th>Commit Tracker (<code>loctest.py</code>)</th>
+                </tr>
+                <tr>
+                    <td>Data source</td>
+                    <td>Merged PRs only</td>
+                    <td>All commits across all branches</td>
+                </tr>
+                <tr>
+                    <td>Captures</td>
+                    <td>Code that went through PR review</td>
+                    <td>Everything — direct pushes, branch work, non-PR commits</td>
+                </tr>
+                <tr>
+                    <td>Double-counting</td>
+                    <td>Yes — merge PRs (dev→main) re-count the same lines</td>
+                    <td>No — each commit counted once, merge commits skipped</td>
+                </tr>
+                <tr>
+                    <td>Best for</td>
+                    <td>Tracking reviewed/shipped code</td>
+                    <td>Tracking total development output</td>
+                </tr>
+                <tr>
+                    <td>Log file</td>
+                    <td><code>loc-log.json</code></td>
+                    <td><code>loc-log-commits.json</code></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="highlight-card">
+            <h3>Which Should I Use?</h3>
+            <p>The <strong>commit tracker</strong> gives a more accurate picture of actual work done. The PR tracker can overcount when code flows through branch hierarchies (feature→dev→staging→main), since each merge PR re-counts the full diff. Use commit tracker for total output, PR tracker for shipped/reviewed code.</p>
         </div>
     </div>
 
@@ -367,29 +426,29 @@
             <div class="step-row">
                 <span class="step-num">2</span>
                 <div class="step-content">
-                    <h4>Scans all merged PRs from yesterday</h4>
-                    <p>Pulls data across every repo the developer has access to.</p>
+                    <h4>PR tracker scans merged PRs from yesterday</h4>
+                    <p>Uses the GitHub Search Issues API to find all merged PRs, fetches file-level stats, saves to <code>loc-log.json</code>.</p>
                 </div>
             </div>
             <div class="step-row">
                 <span class="step-num">3</span>
                 <div class="step-content">
-                    <h4>Strips doc and data files</h4>
-                    <p>Fetches file-level stats to exclude non-code file types from the count.</p>
+                    <h4>Commit tracker scans all repos and branches</h4>
+                    <p>Uses the Events API to discover repos you've pushed to, then scans every branch for commits. Skips merge commits to avoid double-counting. Saves to <code>loc-log-commits.json</code>.</p>
                 </div>
             </div>
             <div class="step-row">
                 <span class="step-num">4</span>
                 <div class="step-content">
-                    <h4>Saves results to <code>loc-log.json</code></h4>
-                    <p>Stored in the private <code>loc-data</code> repo — only reachable via authorized PAT.</p>
+                    <h4>Both strip doc and data files</h4>
+                    <p><code>.md</code>, <code>.rst</code>, <code>.txt</code>, <code>.csv</code> excluded from line counts.</p>
                 </div>
             </div>
             <div class="step-row">
                 <span class="step-num">5</span>
                 <div class="step-content">
-                    <h4>CLI reads the file on demand</h4>
-                    <p>Run <code>loc.py</code> locally — it fetches the JSON using your <code>GH_LOC_TOKEN</code> PAT.</p>
+                    <h4>CLIs read the files on demand</h4>
+                    <p>Run <code>loc.py</code> or <code>loctest.py</code> locally — they fetch the JSON using your <code>GH_LOC_TOKEN</code> PAT.</p>
                 </div>
             </div>
         </div>
@@ -430,9 +489,10 @@
                     <h4>Copy the tracker files into it</h4>
 <pre><code>gh repo clone YOUR_USERNAME/loc-data ~/YOUR_USERNAME-loc-data && cd ~/YOUR_USERNAME-loc-data
 mkdir -p scripts .github/workflows
-curl -o scripts/track_loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_loc.py
-curl -o .github/workflows/track-loc.yml https://raw.githubusercontent.com/westconn24/westconn24/main/.github/workflows/track-loc.yml
-git add scripts/track_loc.py .github/workflows/track-loc.yml
+curl -sL -o scripts/track_prs.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_prs.py
+curl -sL -o scripts/track_loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_loc.py
+curl -sL -o .github/workflows/track-loc.yml https://raw.githubusercontent.com/westconn24/westconn24/main/.github/workflows/track-loc.yml
+git add scripts/ .github/
 git commit -m "Add LOC tracker"
 git push</code></pre>
                 </div>
@@ -457,21 +517,52 @@ git push</code></pre>
                 <div class="step-content">
                     <h4>Run the workflow — backfill last 30 days</h4>
                     <pre><code>gh workflow run track-loc.yml --repo YOUR_USERNAME/loc-data --field days_back=30</code></pre>
-                    <p style="margin-top: 10px; color: rgba(255,255,255,0.55); font-size: 0.9rem;">Takes ~1–2 minutes to complete.</p>
+                    <p style="margin-top: 10px; color: rgba(255,255,255,0.55); font-size: 0.9rem;">Takes ~2–3 minutes to complete.</p>
                 </div>
             </div>
 
             <div class="step-row">
                 <span class="step-num">6</span>
                 <div class="step-content">
-                    <h4>Add token and CLI to your shell</h4>
+                    <h4>Add token and CLIs to your shell</h4>
 <pre><code># Add token to shell (replace with your actual token)
 echo 'export GH_LOC_TOKEN=ghp_your_token_here' >> ~/.zshrc && source ~/.zshrc
 
-# Install the CLI
-curl -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/loc.py</code></pre>
+# Install both CLIs
+curl -sL -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/loc.py
+curl -sL -o ~/loctest.py https://raw.githubusercontent.com/westconn24/westconn24/main/loctest.py</code></pre>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Upgrade Setup -->
+    <div class="section">
+        <div class="section-header">Upgrade — Already Have PR-Only Tracker</div>
+
+        <div class="card">
+            <h3>Add Commit Tracking to Existing Setup</h3>
+            <p>If you already have a <code>loc-data</code> repo running the old PR-only tracker, run these commands to add the commit tracker alongside it:</p>
+<pre><code>cd ~/YOUR_USERNAME-loc-data
+
+# Download the updated files
+curl -sL -o scripts/track_prs.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_prs.py
+curl -sL -o scripts/track_loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/scripts/track_loc.py
+curl -sL -o .github/workflows/track-loc.yml https://raw.githubusercontent.com/westconn24/westconn24/main/.github/workflows/track-loc.yml
+
+# Commit and push
+git add scripts/ .github/
+git commit -m "Add commit-based LOC tracking alongside PR tracking"
+git push
+
+# Backfill the commit log
+gh workflow run track-loc.yml --repo YOUR_USERNAME/loc-data --field days_back=30
+
+# Install the commit viewer CLI
+curl -sL -o ~/loctest.py https://raw.githubusercontent.com/westconn24/westconn24/main/loctest.py</code></pre>
+            <p style="margin-top: 14px; color: rgba(255,255,255,0.55); font-size: 0.9rem;">Your existing <code>loc.py</code> and <code>loc-log.json</code> keep working. The commit tracker writes to a separate <code>loc-log-commits.json</code> file.</p>
         </div>
     </div>
 
@@ -483,13 +574,14 @@ curl -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/lo
 
         <div class="grid-2">
             <div class="card">
-                <h3>Flags</h3>
+                <h3>PR Tracker — <code>loc.py</code></h3>
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.55); margin-bottom: 16px;">Tracks merged PRs. Good for seeing what shipped through code review.</p>
                 <div class="flag-grid">
                     <span class="flag-key">--user USERNAME</span>
-                    <span class="flag-desc">Target developer — last 7 days by default</span>
+                    <span class="flag-desc">Target developer</span>
 
                     <span class="flag-key">--days 30</span>
-                    <span class="flag-desc">Extend the lookback window</span>
+                    <span class="flag-desc">Lookback window (default: 7)</span>
 
                     <span class="flag-key">--week</span>
                     <span class="flag-desc">Summary only, no daily breakdown</span>
@@ -498,41 +590,115 @@ curl -o ~/loc.py https://raw.githubusercontent.com/westconn24/westconn24/main/lo
                     <span class="flag-desc">Show individual PRs per day</span>
 
                     <span class="flag-key">--max-deletions N</span>
-                    <span class="flag-desc">Refactor filter threshold (default 15000, 0 = off)</span>
+                    <span class="flag-desc">Refactor filter (default 15000, 0 = off)</span>
 
                     <span class="flag-key">--exclude REPO</span>
-                    <span class="flag-desc">Exclude a specific repo from totals</span>
+                    <span class="flag-desc">Exclude a specific repo</span>
 
                     <span class="flag-key">--token ghp_...</span>
-                    <span class="flag-desc">Pass token explicitly instead of env var</span>
+                    <span class="flag-desc">Pass token explicitly</span>
                 </div>
+<pre><code>python3 ~/loc.py --user YOUR_USERNAME
+python3 ~/loc.py --user YOUR_USERNAME --days 30
+python3 ~/loc.py --user YOUR_USERNAME -v</code></pre>
             </div>
 
             <div class="card">
-                <h3>Viewing the Team</h3>
-                <pre><code>python3 ~/loc.py --user westconn24
-python3 ~/loc.py --user ArkashJ
-python3 ~/loc.py --user aniture</code></pre>
-                <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">You can view someone's stats as long as your <code>GH_LOC_TOKEN</code> has <code>repo</code> scope access to their <code>loc-data</code> repo. Shared Benmore org membership covers this automatically.</p>
+                <h3>Commit Tracker — <code>loctest.py</code></h3>
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.55); margin-bottom: 16px;">Tracks every commit across all branches. More accurate total output.</p>
+                <div class="flag-grid">
+                    <span class="flag-key">--remote</span>
+                    <span class="flag-desc">Fetch from GitHub (required)</span>
+
+                    <span class="flag-key">--user USERNAME</span>
+                    <span class="flag-desc">Target developer</span>
+
+                    <span class="flag-key">--days 30</span>
+                    <span class="flag-desc">Lookback window (default: 7)</span>
+
+                    <span class="flag-key">--week</span>
+                    <span class="flag-desc">Summary only</span>
+
+                    <span class="flag-key">-v</span>
+                    <span class="flag-desc">Show individual commits per day</span>
+
+                    <span class="flag-key">--exclude REPO</span>
+                    <span class="flag-desc">Exclude a specific repo</span>
+                </div>
+<pre><code>python3 ~/loctest.py --remote --user YOUR_USERNAME
+python3 ~/loctest.py --remote --user YOUR_USERNAME --days 30
+python3 ~/loctest.py --remote --user YOUR_USERNAME -v</code></pre>
             </div>
         </div>
+    </div>
 
-        <div class="card" style="margin-top: 4px;">
-            <h3>Example Output</h3>
-            <div class="output-block">westconn24 — last 7 days
+    <!-- Example Output -->
+    <div class="section">
+        <div class="section-header">Example Output</div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>PR Tracker Output</h3>
+                <div class="output-block">westconn24 — last 7 days
 
 Date               Added     Deleted           Net  PRs
 ------------  ----------  ----------  ------------  ---
 2026-04-06  +  10,942  -     136  net    +10,806  (2 PRs)
 2026-04-07  +  14,265  -   3,574  net    +10,691  (2 PRs)
 2026-04-08  +  12,296  -   2,265  net    +10,031  (18 PRs)
-2026-04-09  +  24,785  -   1,839  net    +22,946  (4 PRs)
+2026-04-09  +  24,593  -   1,839  net    +22,754  (4 PRs)
 
-Total added          62,288
+Total added          62,096
 Total deleted         7,814
-Net                 +54,474
+Net                 +54,282
 Active days               4 of 7
-Avg net/day         +13,619</div>
+Avg net/day         +13,571</div>
+            </div>
+
+            <div class="card">
+                <h3>Commit Tracker Output</h3>
+                <div class="output-block">westconn24 — last 7 days [remote]
+
+Date               Added     Deleted           Net
+------------  ----------  ----------  ------------
+2026-04-06  +   6,267  -     216  net     +6,051  (41 commits)
+2026-04-07  +   7,847  -   2,738  net     +5,109  (20 commits)
+2026-04-08  +  17,266  -   1,114  net    +16,152  (39 commits)
+2026-04-09  +  16,875  -   2,511  net    +14,364  (58 commits)
+
+Total added          48,255
+Total deleted         6,579
+Net                 +41,676
+Total commits           158
+Active days               4 of 7
+Avg net/day         +10,419</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Viewing the Team -->
+    <div class="section">
+        <div class="section-header">Viewing the Whole Team</div>
+
+        <div class="card">
+            <h3>Quick Commands</h3>
+            <div class="grid-2" style="margin-top: 14px;">
+                <div>
+                    <h4>PR Stats</h4>
+<pre><code>python3 ~/loc.py --user westconn24
+python3 ~/loc.py --user ArkashJ
+python3 ~/loc.py --user aniture</code></pre>
+                </div>
+                <div>
+                    <h4>Commit Stats</h4>
+<pre><code>python3 ~/loctest.py --remote --user westconn24
+python3 ~/loctest.py --remote --user ArkashJ
+python3 ~/loctest.py --remote --user aniture</code></pre>
+                </div>
+            </div>
+            <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.55);">You can view someone's stats as long as your <code>GH_LOC_TOKEN</code> has <code>repo</code> scope access to their <code>loc-data</code> repo. Shared Benmore org membership covers this automatically.</p>
         </div>
     </div>
 
@@ -546,8 +712,9 @@ Avg net/day         +13,619</div>
             <div class="feature-card">
                 <h3>Zero Ongoing Effort</h3>
                 <ul>
-                    <li>Runs automatically every morning at <strong>6 AM UTC</strong> — no action needed</li>
-                    <li>PAT never expires if set to "No expiration" at creation time</li>
+                    <li>Both trackers run automatically every morning at <strong>6 AM UTC</strong> in a single workflow</li>
+                    <li>Produces two log files: <code>loc-log.json</code> (PRs) and <code>loc-log-commits.json</code> (commits)</li>
+                    <li>PAT never expires if set to "No expiration"</li>
                     <li>Manual backfill any range:<br><code>gh workflow run track-loc.yml --repo USERNAME/loc-data --field days_back=N</code></li>
                 </ul>
             </div>
@@ -565,14 +732,35 @@ Avg net/day         +13,619</div>
 
     <!-- Limitations -->
     <div class="section">
-        <div class="section-header">Limitations</div>
+        <div class="section-header">What Each Tracker Captures</div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>PR Tracker (<code>loc.py</code>)</h3>
+                <ul>
+                    <li>Lines added/deleted in <strong>merged pull requests</strong></li>
+                    <li>Can overcount when merge PRs flow code through branch hierarchies (feature→dev→main)</li>
+                    <li>Does NOT capture direct pushes or unmerged branch work</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Commit Tracker (<code>loctest.py</code>)</h3>
+                <ul>
+                    <li>Every individual commit across <strong>all repos and branches</strong></li>
+                    <li>Skips merge commits (&gt;1 parent) to prevent double-counting</li>
+                    <li>Captures direct pushes, branch work, and non-PR commits</li>
+                    <li>Uses GitHub Events API to discover active repos</li>
+                </ul>
+            </div>
+        </div>
 
         <div class="error-card">
-            <h3>What It Does Not Track</h3>
+            <h3>Neither Tracker Captures</h3>
             <ul>
-                <li><strong>Direct pushes to main</strong> — no PR means no data captured</li>
                 <li><strong>Code review time</strong> — reviewing PRs is invisible to this system</li>
                 <li><strong>Design, planning, async communication</strong> — non-code contributions not captured</li>
+                <li><strong>Non-GitHub contributions</strong> — anything outside Git is not tracked</li>
             </ul>
             <p style="margin-top: 14px;">Use as a <strong>productivity signal</strong> — good for spotting gaps, not for ranking people.</p>
         </div>

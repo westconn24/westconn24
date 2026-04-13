@@ -1,22 +1,116 @@
-import requests
+"""
+track_loc - Tracks ALL commits across active repos and all branches.
+Uses the Events API to discover repos with recent pushes, then fetches
+per-repo commits for full coverage. No pip dependencies (stdlib only).
+"""
+
 import json
 import os
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 
-USERNAME = os.environ.get("GITHUB_REPOSITORY_OWNER") or os.environ.get("GH_USERNAME")
+USERNAME = os.environ.get("GH_USERNAME") or os.environ.get("GITHUB_REPOSITORY_OWNER")
 if not USERNAME:
     raise SystemExit("Could not determine GitHub username. Set GH_USERNAME env var.")
-PAT = os.environ.get("GH_PAT")
-TOKEN = PAT or os.environ.get("GITHUB_TOKEN")
+
+TOKEN = os.environ.get("GH_PAT") or os.environ.get("GITHUB_TOKEN")
+if not TOKEN:
+    raise SystemExit("No token. Set GH_PAT secret.")
+
 DAYS_BACK = int(os.environ.get("DAYS_BACK", "1"))
+EXCLUDE_EXTS = {".md", ".rst", ".txt", ".csv"}
 
 
-headers = {
-    "Authorization": f"token {TOKEN}",
-    "Accept": "application/vnd.github.v3+json"
-}
+def api_get(url, params=None):
+    if params:
+        url = f"{url}?{urllib.parse.urlencode(params)}"
+    req = urllib.request.Request(url)
+    req.add_header("Accept", "application/vnd.github.v3+json")
+    req.add_header("Authorization", f"token {TOKEN}")
+    try:
+        with urllib.request.urlopen(req) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        if e.code == 409:  # empty repo
+            return []
+        raise
 
-log_file = "loc-log.json"
+
+def api_get_paginated(url, params=None, max_per_page=100):
+    params = dict(params or {})
+    params.setdefault("per_page", max_per_page)
+    all_items = []
+    page = 1
+    while True:
+        params["page"] = page
+        items = api_get(url, params)
+        if not isinstance(items, list) or not items:
+            break
+        all_items.extend(items)
+        if len(items) < int(params["per_page"]):
+            break
+        page += 1
+    return all_items
+
+
+def find_active_repos():
+    """Use the Events API to find repos the user has recently pushed to."""
+    repos = set()
+    for page in range(1, 11):
+        events = api_get(
+            f"https://api.github.com/users/{USERNAME}/events",
+            {"per_page": 30, "page": page},
+        )
+        if not events:
+            break
+        for event in events:
+            if event.get("type") == "PushEvent":
+                repos.add(event["repo"]["name"])
+        if len(events) < 30:
+            break
+    return sorted(repos)
+
+
+def get_repo_commits(repo, since, until):
+    """Get all commits by USERNAME in a repo, across all branches."""
+    branches = api_get_paginated(f"https://api.github.com/repos/{repo}/branches")
+
+    seen_shas = set()
+    all_commits = []
+
+    for branch in branches:
+        commits = api_get_paginated(
+            f"https://api.github.com/repos/{repo}/commits",
+            {"author": USERNAME, "since": since, "until": until, "sha": branch["name"]},
+        )
+        for c in commits:
+            if c["sha"] not in seen_shas:
+                seen_shas.add(c["sha"])
+                all_commits.append(c)
+
+    return all_commits
+
+
+def get_commit_file_stats(repo, sha):
+    """Fetch file-level stats for a commit, excluding doc files."""
+    data = api_get(f"https://api.github.com/repos/{repo}/commits/{sha}")
+    additions = 0
+    deletions = 0
+    for f in data.get("files", []):
+        ext = "." + f["filename"].rsplit(".", 1)[-1] if "." in f["filename"] else ""
+        if ext.lower() not in EXCLUDE_EXTS:
+            additions += f.get("additions", 0)
+            deletions += f.get("deletions", 0)
+    return additions, deletions
+
+
+# --- Main ---
+
+log_file = "loc-log-commits.json"
 try:
     with open(log_file) as f:
         log = json.load(f)
@@ -24,77 +118,92 @@ except (FileNotFoundError, json.JSONDecodeError):
     log = []
 
 today = datetime.now(timezone.utc)
-dates = [
-    (today - timedelta(days=i)).strftime("%Y-%m-%d")
-    for i in range(1, DAYS_BACK + 1)
-]
+since = (today - timedelta(days=DAYS_BACK)).strftime("%Y-%m-%dT00:00:00Z")
+until = (today + timedelta(days=1)).strftime("%Y-%m-%dT00:00:00Z")
 
-for date in dates:
+# Discover repos from push events
+print(f"Finding repos {USERNAME} has pushed to...")
+repos = find_active_repos()
+print(f"Active repos: {', '.join(repos)}\n")
+
+# Collect all commits across repos, grouped by date
+by_date = defaultdict(list)
+seen_shas = set()
+
+for i, repo in enumerate(repos):
+    sys.stdout.write(f"\r  [{i+1}/{len(repos)}] {repo:<50}")
+    sys.stdout.flush()
+
+    try:
+        commits = get_repo_commits(repo, since, until)
+    except urllib.error.HTTPError as e:
+        if e.code in (403, 404, 451):
+            continue
+        raise
+
+    for c in commits:
+        sha = c["sha"]
+        if sha in seen_shas:
+            continue
+        seen_shas.add(sha)
+
+        # Skip merge commits
+        if len(c.get("parents", [])) > 1:
+            continue
+
+        date_str = c["commit"]["author"]["date"][:10]
+        by_date[date_str].append((repo, c))
+
+print(f"\r  Scanned {len(repos)} repos, found {len(seen_shas)} unique commits" + " " * 30)
+
+# Include all dates in range even if no commits
+all_dates = set()
+for i in range(DAYS_BACK + 1):
+    all_dates.add((today - timedelta(days=i)).strftime("%Y-%m-%d"))
+all_dates.update(by_date.keys())
+
+for date in sorted(all_dates):
     print(f"\n--- {date} ---")
+    day_commits = by_date.get(date, [])
 
-    search_url = "https://api.github.com/search/issues"
-    params = {
-        "q": f"author:{USERNAME} type:pr is:merged merged:{date}",
-        "per_page": 100
-    }
+    commits_processed = []
+    total_add = 0
+    total_del = 0
 
-    response = requests.get(search_url, headers=headers, params=params)
-    data = response.json()
+    for repo, c in day_commits:
+        sha = c["sha"]
+        msg = c["commit"]["message"].split("\n")[0]
 
-    total_additions = 0
-    total_deletions = 0
-    prs_processed = []
+        try:
+            additions, deletions = get_commit_file_stats(repo, sha)
+        except urllib.error.HTTPError as e:
+            print(f"  error fetching {sha[:7]}: {e.code}")
+            continue
 
-    for item in data.get("items", []):
-        pr_number = item["number"]
-        pr_url = item["url"].replace("/issues/", "/pulls/")
-        pr_response = requests.get(pr_url, headers=headers)
+        total_add += additions
+        total_del += deletions
 
-        if pr_response.status_code == 200:
-            pr_data = pr_response.json()
-            repo_full_name = pr_data["base"]["repo"]["full_name"]
+        commits_processed.append({
+            "repo": repo,
+            "sha": sha[:7],
+            "message": msg[:80],
+            "additions": additions,
+            "deletions": deletions,
+        })
+        print(f"  {sha[:7]} {repo}: +{additions} -{deletions}  {msg[:60]}")
 
-            # Fetch files to exclude docs (.md, .rst, .txt)
-            EXCLUDE_EXTS = {".md", ".rst", ".txt", ".csv"}
-            files_url = pr_url + "/files"
-            additions, deletions = 0, 0
-            page = 1
-            while True:
-                files_resp = requests.get(files_url, headers=headers, params={"per_page": 100, "page": page})
-                files = files_resp.json()
-                if not files:
-                    break
-                for f in files:
-                    ext = "." + f["filename"].rsplit(".", 1)[-1] if "." in f["filename"] else ""
-                    if ext.lower() not in EXCLUDE_EXTS:
-                        additions += f.get("additions", 0)
-                        deletions += f.get("deletions", 0)
-                if len(files) < 100:
-                    break
-                page += 1
+    if not commits_processed:
+        print("  No commits found")
 
-            total_additions += additions
-            total_deletions += deletions
-            prs_processed.append({
-                "repo": repo_full_name,
-                "pr": pr_number,
-                "title": item["title"],
-                "additions": additions,
-                "deletions": deletions
-            })
-            print(f"  PR #{pr_number} in {repo_full_name}: +{additions} -{deletions}")
-
-    if not prs_processed:
-        print("  No merged PRs found")
-
-    print(f"  Total: +{total_additions} -{total_deletions} (net {total_additions - total_deletions})")
+    net = total_add - total_del
+    print(f"  Total: +{total_add} -{total_del} (net {net})")
 
     entry = {
         "date": date,
-        "additions": total_additions,
-        "deletions": total_deletions,
-        "net": total_additions - total_deletions,
-        "prs": prs_processed
+        "additions": total_add,
+        "deletions": total_del,
+        "net": net,
+        "commits": commits_processed,
     }
 
     existing = next((e for e in log if e["date"] == date), None)

@@ -1,4 +1,4 @@
-name: Track Daily LOC from PRs
+name: Track Daily LOC
 
 on:
   schedule:
@@ -31,13 +31,19 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
           DAYS_BACK: ${{ github.event.inputs.days_back || (hashFiles('loc-log.json') == '' && '30' || '1') }}
+        run: python scripts/track_prs.py
+
+      - name: Track LOC from commits
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          DAYS_BACK: ${{ github.event.inputs.days_back || (hashFiles('loc-log-commits.json') == '' && '30' || '1') }}
         run: python scripts/track_loc.py
 
       - name: Commit log update
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add loc-log.json
+          git add loc-log.json loc-log-commits.json
           git diff --staged --quiet || git commit -m "LOC update: $(date -u '+%Y-%m-%d') (${DAYS_BACK:-1}d)"
           git pull --rebase origin main
           git push
