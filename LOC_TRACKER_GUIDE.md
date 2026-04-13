@@ -167,23 +167,23 @@ Tracks every individual commit across all branches. More accurate total output.
 
 ```bash
 # Your stats — last 7 days (default, reads from GitHub)
-python3 ~/loctest.py --remote --user YOUR_USERNAME
+python3 ~/loctest.py --user YOUR_USERNAME
 
 # Last 30 days
-python3 ~/loctest.py --remote --user YOUR_USERNAME --days 30
+python3 ~/loctest.py --user YOUR_USERNAME --days 30
 
 # Summary only
-python3 ~/loctest.py --remote --user YOUR_USERNAME --week
+python3 ~/loctest.py --user YOUR_USERNAME --week
 
 # Show individual commits per day
-python3 ~/loctest.py --remote --user YOUR_USERNAME -v
+python3 ~/loctest.py --user YOUR_USERNAME -v
 
 # View someone else
-python3 ~/loctest.py --remote --user ArkashJ
-python3 ~/loctest.py --remote --user aniture
+python3 ~/loctest.py --user ArkashJ
+python3 ~/loctest.py --user aniture
 
 # Exclude a repo
-python3 ~/loctest.py --remote --user YOUR_USERNAME --exclude Benmore-Studio/162-AeroSleuth
+python3 ~/loctest.py --user YOUR_USERNAME --exclude Benmore-Studio/162-AeroSleuth
 ```
 
 ### Example Output — PR Tracker
@@ -236,9 +236,9 @@ python3 ~/loc.py --user ArkashJ
 python3 ~/loc.py --user aniture
 
 # Commit stats
-python3 ~/loctest.py --remote --user westconn24
-python3 ~/loctest.py --remote --user ArkashJ
-python3 ~/loctest.py --remote --user aniture
+python3 ~/loctest.py --user westconn24
+python3 ~/loctest.py --user ArkashJ
+python3 ~/loctest.py --user aniture
 ```
 
 Note: you can only view someone's stats if your `GH_LOC_TOKEN` has `repo` scope access to their `loc-data` repo. Shared Benmore org membership covers this automatically.

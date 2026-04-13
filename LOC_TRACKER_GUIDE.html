@@ -607,9 +607,6 @@ python3 ~/loc.py --user YOUR_USERNAME -v</code></pre>
                 <h3>Commit Tracker — <code>loctest.py</code></h3>
                 <p style="font-size: 0.9rem; color: rgba(255,255,255,0.55); margin-bottom: 16px;">Tracks every commit across all branches. More accurate total output.</p>
                 <div class="flag-grid">
-                    <span class="flag-key">--remote</span>
-                    <span class="flag-desc">Fetch from GitHub (required)</span>
-
                     <span class="flag-key">--user USERNAME</span>
                     <span class="flag-desc">Target developer</span>
 
@@ -625,9 +622,9 @@ python3 ~/loc.py --user YOUR_USERNAME -v</code></pre>
                     <span class="flag-key">--exclude REPO</span>
                     <span class="flag-desc">Exclude a specific repo</span>
                 </div>
-<pre><code>python3 ~/loctest.py --remote --user YOUR_USERNAME
-python3 ~/loctest.py --remote --user YOUR_USERNAME --days 30
-python3 ~/loctest.py --remote --user YOUR_USERNAME -v</code></pre>
+<pre><code>python3 ~/loctest.py --user YOUR_USERNAME
+python3 ~/loctest.py --user YOUR_USERNAME --days 30
+python3 ~/loctest.py --user YOUR_USERNAME -v</code></pre>
             </div>
         </div>
     </div>
@@ -693,9 +690,9 @@ python3 ~/loc.py --user aniture</code></pre>
                 </div>
                 <div>
                     <h4>Commit Stats</h4>
-<pre><code>python3 ~/loctest.py --remote --user westconn24
-python3 ~/loctest.py --remote --user ArkashJ
-python3 ~/loctest.py --remote --user aniture</code></pre>
+<pre><code>python3 ~/loctest.py --user westconn24
+python3 ~/loctest.py --user ArkashJ
+python3 ~/loctest.py --user aniture</code></pre>
                 </div>
             </div>
             <p style="margin-top: 16px; font-size: 0.9rem; color: rgba(255,255,255,0.55);">You can view someone's stats as long as your <code>GH_LOC_TOKEN</code> has <code>repo</code> scope access to their <code>loc-data</code> repo. Shared Benmore org membership covers this automatically.</p>

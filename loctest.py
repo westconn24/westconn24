@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
 loctest - LOC viewer for commit-based tracking.
-Reads from ~/loc-log-commits.json (built by track_loc_test.py).
+Fetches live data from GitHub by default.
 
 Usage:
   python loctest.py              # last 7 days
   python loctest.py --days 30    # last 30 days
   python loctest.py --week       # summary only
   python loctest.py -v           # show individual commits
-  python loctest.py --remote     # fetch from GitHub instead of local file
+  python loctest.py --local      # read from local file instead of GitHub
 """
 
 import argparse
@@ -127,18 +127,18 @@ def main():
     parser.add_argument("--max-deletions", type=int, default=15000, metavar="N",
                         help="Exclude items with more than N deletions (default: 15000, 0=include all)")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show individual commits")
-    parser.add_argument("--remote", action="store_true", help="Fetch from GitHub instead of local file")
-    parser.add_argument("--file", "-f", default=DEFAULT_LOCAL, help="Local log file path")
+    parser.add_argument("--local", action="store_true", help="Read from local file instead of GitHub")
+    parser.add_argument("--file", "-f", default=DEFAULT_LOCAL, help="Local log file path (with --local)")
     args = parser.parse_args()
 
-    if args.remote:
-        print("Fetching from GitHub...", end="\r")
-        log = load_remote(args.user, token=args.token)
-    else:
+    if args.local:
         try:
             log = load_local(args.file)
         except FileNotFoundError:
-            raise SystemExit(f"No local log at {args.file}. Run track_loc_test.py first, or use --remote.")
+            raise SystemExit(f"No local log at {args.file}. Run track_loc_test.py first.")
+    else:
+        print("Fetching data...", end="\r")
+        log = load_remote(args.user, token=args.token)
 
     cutoff = (datetime.now(timezone.utc) - timedelta(days=args.days)).strftime("%Y-%m-%d")
     max_del = None if args.max_deletions == 0 else args.max_deletions
@@ -148,7 +148,7 @@ def main():
         print("No data found for that range.")
         return
 
-    source = "remote" if args.remote else "local"
+    source = "local" if args.local else "remote"
     exclude_note = f"  (excluding: {', '.join(args.exclude)})" if args.exclude else ""
     print(f"\n  {args.user} — last {args.days} days [{source}]{exclude_note}\n")
     print(f"  {'Date':<12}  {'Added':>10}  {'Deleted':>10}  {'Net':>12}")
