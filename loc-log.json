@@ -498,10 +498,25 @@
   },
   {
     "date": "2026-04-10",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "prs": []
+    "additions": 34,
+    "deletions": 83,
+    "net": -49,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 8,
+        "title": "fix: default mediator availability to half-day blocks",
+        "additions": 30,
+        "deletions": 81
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 7,
+        "title": "fix: show nationwide mediators in homepage carousel",
+        "additions": 4,
+        "deletions": 2
+      }
+    ]
   },
   {
     "date": "2026-04-11",
@@ -512,6 +527,93 @@
   },
   {
     "date": "2026-04-12",
+    "additions": 6002,
+    "deletions": 993,
+    "net": 5009,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "pr": 54,
+        "title": "Merge nolimit-test into testing",
+        "additions": 6002,
+        "deletions": 993
+      }
+    ]
+  },
+  {
+    "date": "2026-04-13",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "prs": []
+  },
+  {
+    "date": "2026-04-14",
+    "additions": 61562,
+    "deletions": 3432,
+    "net": 58130,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 36,
+        "title": "Epic 00: Infrastructure + FAA filter alignment",
+        "additions": 34890,
+        "deletions": 1494
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 9,
+        "title": "feat(epic-04): mediator profiles & onboarding",
+        "additions": 4957,
+        "deletions": 502
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 35,
+        "title": "feat(epic-00): infrastructure hardening + frontend Sentry",
+        "additions": 21715,
+        "deletions": 1436
+      }
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "additions": 18603,
+    "deletions": 1906,
+    "net": 16697,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 10,
+        "title": "feat(audit): add AuditLog model with auth and profile event tracking",
+        "additions": 888,
+        "deletions": 8
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "pr": 1,
+        "title": "Frontend prototype scaffold",
+        "additions": 4713,
+        "deletions": 94
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "pr": 57,
+        "title": "Dev",
+        "additions": 6501,
+        "deletions": 902
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "pr": 56,
+        "title": "fix+feat: Direct dial regression fix + Solar Sales / Open Ended mode toggle",
+        "additions": 6501,
+        "deletions": 902
+      }
+    ]
+  },
+  {
+    "date": "2026-04-16",
     "additions": 0,
     "deletions": 0,
     "net": 0,

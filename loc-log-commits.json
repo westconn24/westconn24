@@ -1,0 +1,1234 @@
+[
+  {
+    "date": "2026-04-09",
+    "additions": 16875,
+    "deletions": 2511,
+    "net": 14364,
+    "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "5f0ef00",
+        "message": "docs: add QA feedback deployment handoff guide",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "41a31f7",
+        "message": "chore(MediationToday): update vercel.json",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "863eefa",
+        "message": "style(MediationToday): update qa-feedback.tsx",
+        "additions": 10,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "548e533",
+        "message": "style(MediationToday): update qa-feedback.tsx",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "54c1b97",
+        "message": "feat(MediationToday): update prod.py",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "57f1a46",
+        "message": "chore(MediationToday): update backend.yml, Dockerfile",
+        "additions": 2,
+        "deletions": 13
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "7e294d2",
+        "message": "chore(MediationToday): update requirements.txt",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "949af5b",
+        "message": "feat(MediationToday): update models.py, permissions.py, serializers.py, tasks.py",
+        "additions": 498,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "3f917d8",
+        "message": "test(MediationToday): update test_deactivate_delete.py, test_integration_deep.py",
+        "additions": 6271,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "9c08076",
+        "message": "fix(tests): update tests for lockout 429 responses and UUID-based feedback statu",
+        "additions": 116,
+        "deletions": 104
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "cab2e1c",
+        "message": "style(MediationToday): update page.tsx, page.tsx, search-results.tsx, region-sel",
+        "additions": 9,
+        "deletions": 43
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "28a540e",
+        "message": "feat(MediationToday): update tasks.py",
+        "additions": 16,
+        "deletions": 39
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "e9d56b1",
+        "message": "feat(MediationToday): update services.py, views.py",
+        "additions": 3,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "d8642f3",
+        "message": "chore(MediationToday): update vercel.json",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "5b34efc",
+        "message": "style(MediationToday): update page.tsx, global-error.tsx, layout.tsx, mediators.",
+        "additions": 80,
+        "deletions": 49
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "819e8a1",
+        "message": "feat(MediationToday): update prod.py",
+        "additions": 3,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "58d6bcd",
+        "message": "feat(MediationToday): update permissions.py, services.py, views.py, 0004_add_pub",
+        "additions": 72,
+        "deletions": 25
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "ed2dd7d",
+        "message": "style(MediationToday): update page.tsx, page.tsx, search-results.tsx, page.tsx (",
+        "additions": 38,
+        "deletions": 21
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "bce8d04",
+        "message": "style(MediationToday): update page.tsx, page.tsx, page.tsx, page.tsx (+4 more)",
+        "additions": 18,
+        "deletions": 14
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "514f850",
+        "message": "feat(mock-data): add 8 more non-Florida mock mediators",
+        "additions": 377,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "11b3822",
+        "message": "refactor: make platform state-agnostic with nationwide credential support",
+        "additions": 1766,
+        "deletions": 379
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "5624c76",
+        "message": "fix: address full PR audit \u2014 3 critical, 9 high, 16 medium, 9 low findings",
+        "additions": 304,
+        "deletions": 334
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "dad7384",
+        "message": "fix: include element selector and text in portal QA body",
+        "additions": 8,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "2488f5b",
+        "message": "fix: read QA_PORTAL_AUTH_TYPE from env vars in settings",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "0cfac9f",
+        "message": "fix: enable Celery eager mode on prod (no worker dyno yet)",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "acab1c1",
+        "message": "fix: make portal auth header configurable (Bearer for prod, X-API-KEY for stagin",
+        "additions": 12,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "cd9d059",
+        "message": "fix: portal auth uses X-API-KEY header + parse id from response",
+        "additions": 4,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "ed53368",
+        "message": "fix: import ssl at top of staging settings",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "780d60a",
+        "message": "fix: re-enable Celery eager mode + SSL so portal forwarding works on staging",
+        "additions": 8,
+        "deletions": 8
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "b815ed6",
+        "message": "chore: redeploy with fixed env vars (no trailing newlines)",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "92a259e",
+        "message": "fix: remove origin check on refresh (breaks Vercel preview URLs) + add HMAC debu",
+        "additions": 13,
+        "deletions": 9
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "22e8ac0",
+        "message": "chore: trigger Vercel rebuild with mock fix",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "d4331b7",
+        "message": "fix: allow mock routes on Vercel preview (backend endpoints not built yet)",
+        "additions": 7,
+        "deletions": 9
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "4b5a5f2",
+        "message": "fix: wrap login page in Suspense for useSearchParams (Next.js 16)",
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "0a1876b",
+        "message": "chore: trigger preview build after clearing ignored-build-step",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "da79ed2",
+        "message": "chore: trigger Vercel preview deploy for dev",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "5efc134",
+        "message": "chore: trigger rebuild with heroku-geo-buildpack",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "6f55e39",
+        "message": "fix: add libblas/liblapack to Aptfile for GDAL runtime deps",
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "eee4507",
+        "message": "chore: trigger Heroku rebuild with DISABLE_COLLECTSTATIC",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "cc8f1ff",
+        "message": "fix: add Aptfile for GDAL on Heroku staging (PostGIS requirement)",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "6b32be8",
+        "message": "docs(AeroSleuth): add docstrings to backend/apps/accounts/admin.py, backend/apps",
+        "additions": 1669,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "cdae77c",
+        "message": "style(AeroSleuth): update ViewToggle.test.tsx, api.test.ts, validators.test.ts, ",
+        "additions": 560,
+        "deletions": 645
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "cf7e435",
+        "message": "feat(AeroSleuth): update api.py, middleware.py, base.py, api.py (+3 more)",
+        "additions": 30,
+        "deletions": 13
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "736942a",
+        "message": "fix(feedback): wire portal webhook with correct auth + payload",
+        "additions": 7,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "38d0433",
+        "message": "fix(feedback): sign widget submissions via proxy with HMAC-SHA256",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "db11a87",
+        "message": "feat(filter-feedback): QA feedback tool + filter sidebar overhaul",
+        "additions": 334,
+        "deletions": 362
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "ee05aca",
+        "message": "feat(filters): restructure filter sidebar with 3-tab architecture and expanded f",
+        "additions": 227,
+        "deletions": 268
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "06d440b",
+        "message": "style(AeroSleuth): update searchable-checkbox-list.tsx",
+        "additions": 2,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "c1d9f34",
+        "message": "chore: gitignore epic files, untrack from repo",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "bafe40b",
+        "message": "style(AeroSleuth): update constants.test.ts, filterStore.test.ts",
+        "additions": 294,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "c79c26c",
+        "message": "style(AeroSleuth): update FilterSidebar.tsx",
+        "additions": 583,
+        "deletions": 116
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "a20ef02",
+        "message": "style(AeroSleuth): update searchable-checkbox-list.tsx",
+        "additions": 166,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "663217c",
+        "message": "style(AeroSleuth): update constants.test.ts, constants.ts, faa-type-ratings.ts, ",
+        "additions": 553,
+        "deletions": 30
+      },
+      {
+        "repo": "westconn24/metric-boost",
+        "sha": "00a4975",
+        "message": "feat: block all commits and pushes on main/master branches",
+        "additions": 53,
+        "deletions": 3
+      },
+      {
+        "repo": "westconn24/metric-boost",
+        "sha": "d80b00b",
+        "message": "docs: add comprehensive README with usage guide and playbook",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/metric-boost",
+        "sha": "2429e79",
+        "message": "feat: complete metric-boost CLI \u2014 all commands implemented and tested",
+        "additions": 2003,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/metric-boost",
+        "sha": "958ec90",
+        "message": "chore: add .gitignore",
+        "additions": 8,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/metric-boost",
+        "sha": "f3f0116",
+        "message": "feat: project scaffold with pyproject.toml, classify, config, git_ops, cli, and ",
+        "additions": 711,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-10",
+    "additions": 2120,
+    "deletions": 1011,
+    "net": 1109,
+    "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "0cfe3ab",
+        "message": "fix: default mediator availability to half-day blocks",
+        "additions": 30,
+        "deletions": 81
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "50401fd",
+        "message": "fix: show nationwide mediators in homepage carousel",
+        "additions": 4,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "5ba7437",
+        "message": "fix: expand context to 20 turns, remove all solar leaks in open guardrails mode",
+        "additions": 22,
+        "deletions": 16
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "e1b1167",
+        "message": "feat: conversationalist prompt + speed tuning for open guardrails mode",
+        "additions": 11,
+        "deletions": 10
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "ea28c61",
+        "message": "fix: guard against Vite env replacement failure for API key",
+        "additions": 2,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "3dc8452",
+        "message": "fix: hardcode dev-key-1 fallback in API client for deployed builds",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "581adfe",
+        "message": "fix: hardcode VITE_API_KEY fallback in vite define config",
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "1c93727",
+        "message": "fix: allow .env.production through dockerignore so Vite bakes API key",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "7ca182e",
+        "message": "fix: add .env.production so Vite bakes VITE_API_KEY into frontend bundle",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "477e03f",
+        "message": "fix: default VITE_API_KEY in Dockerfile for Heroku builds",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "ee26cad",
+        "message": "heroku: pass VITE_API_KEY as Docker build ARG",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "bcfcd28",
+        "message": "chore(CallAssist): update CHANGELOG.md, CLAUDE.md, docker-compose.yml, FINE_TUNI",
+        "additions": 40,
+        "deletions": 237
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "0845ec6",
+        "message": "style(CallAssist): update ComposeBox.tsx, TemplateSelector.tsx, ThreadView.tsx, ",
+        "additions": 43,
+        "deletions": 22
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "9d7fbcc",
+        "message": "feat(CallAssist): update i6d7e8f9a0b1_add_template_id_fk.py, memory_cache.py, sm",
+        "additions": 737,
+        "deletions": 536
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "b357297",
+        "message": "test(CallAssist): update test_sms_service.py",
+        "additions": 99,
+        "deletions": 5
+      },
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "b1d8d45",
+        "message": "Add LOC tracker",
+        "additions": 154,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "decba14",
+        "message": "Regenerate HTML: private loc-data setup, remove migration section",
+        "additions": 583,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "ede11ae",
+        "message": "Update guide: private loc-data setup + migration steps",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "1382bfb",
+        "message": "Read loc-log.json from private loc-data repo",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "a7c889f",
+        "message": "Support private repos via token auth",
+        "additions": 16,
+        "deletions": 6
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "eb09225",
+        "message": "Exclude .csv files from LOC counts",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "84b0c3c",
+        "message": "Default manual trigger to 30-day backfill",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "0084661",
+        "message": "Add team onboarding guide",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "e3c2f5b",
+        "message": "Exclude .md/.rst/.txt files from LOC counts",
+        "additions": 21,
+        "deletions": 3
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "80d09b2",
+        "message": "Set default max-deletions threshold to 15000",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "1f8ec0e",
+        "message": "Auto-filter PRs with extreme deletions (default 10k threshold)",
+        "additions": 9,
+        "deletions": 5
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "03cb55f",
+        "message": "Fix commit order: stage and commit before pull --rebase",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "9f15772",
+        "message": "Pull before push to avoid race condition",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "504ca60",
+        "message": "Auto-backfill 30 days on first run",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "fa292c3",
+        "message": "Support multiple users \u2014 auto-detect username, add --user flag to CLI",
+        "additions": 19,
+        "deletions": 8
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "aefc902",
+        "message": "Add loc.py CLI for team LOC stats",
+        "additions": 109,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "701857e",
+        "message": "Remove debug output",
+        "additions": 0,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "cf704b7",
+        "message": "Fix URL parsing bug, use replace to convert issue URL to PR URL",
+        "additions": 4,
+        "deletions": 7
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "84118a2",
+        "message": "Debug: print API response status",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "d5b2e42",
+        "message": "Add token debug output",
+        "additions": 4,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "f5fcf3b",
+        "message": "Support multi-day backfill via DAYS_BACK input",
+        "additions": 70,
+        "deletions": 60
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "9e7ed0f",
+        "message": "Add daily LOC tracker via merged PRs",
+        "additions": 124,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "commits": []
+  },
+  {
+    "date": "2026-04-12",
+    "additions": 2,
+    "deletions": 1,
+    "net": 1,
+    "commits": [
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "190ad97",
+        "message": "fix: include today in date range",
+        "additions": 2,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "date": "2026-04-13",
+    "additions": 29967,
+    "deletions": 5756,
+    "net": 24211,
+    "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "c29a611",
+        "message": "fix: resolve mypy errors and token fixation regression",
+        "additions": 33,
+        "deletions": 10
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "c39c472",
+        "message": "fix(epic-04): harden auth endpoints, fix stale token 401 regression, resolve tes",
+        "additions": 150,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "815dc21",
+        "message": "fix(epic-04): close all 10 data-loss gaps in profiles & onboarding",
+        "additions": 869,
+        "deletions": 135
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "f0872e5",
+        "message": "fix(epic-04): address PR audit \u2014 security, functional, and test gaps",
+        "additions": 655,
+        "deletions": 462
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "a8a64c8",
+        "message": "feat(epic-04): mediator profiles & onboarding \u2014 full stack implementation",
+        "additions": 1959,
+        "deletions": 254
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "cb7dd3f",
+        "message": "feat(mediators): implement EPIC-04 backend \u2014 model, service, views, admin, tasks",
+        "additions": 1661,
+        "deletions": 5
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "23138cf",
+        "message": "fix(AeroSleuth): comprehensive PR #35 audit fixes \u2014 30 findings addressed",
+        "additions": 427,
+        "deletions": 177
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "2508865",
+        "message": "fix(AeroSleuth): remove redundant 'Enterprise Feature' badge from NTSB filters",
+        "additions": 1,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "4e0f8ce",
+        "message": "refactor(AeroSleuth): split Aircraft Info into 5 collapsible sub-sections",
+        "additions": 77,
+        "deletions": 68
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "fe56e01",
+        "message": "fix(AeroSleuth): compare cards show \"Running...\" only when mutation is pending",
+        "additions": 4,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "31a35cf",
+        "message": "fix(AeroSleuth): resolve duplicate React keys in SearchableCheckboxList",
+        "additions": 312,
+        "deletions": 311
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "68b7511",
+        "message": "feat(AeroSleuth): align Aircraft filter constants & UI with Gary's FAA Excel dat",
+        "additions": 18145,
+        "deletions": 467
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "54ae914",
+        "message": "fix(AeroSleuth): use LocMemCache in test settings for health check",
+        "additions": 5,
+        "deletions": 4
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "6d117f4",
+        "message": "fix(AeroSleuth): upgrade @sentry/nextjs 9.47.1 \u2192 10.48.0 for Next 16 peer dep",
+        "additions": 916,
+        "deletions": 719
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "3afb7ec",
+        "message": "content(AeroSleuth): update copy and UI per Gary's Marker feedback",
+        "additions": 266,
+        "deletions": 125
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "07fc9c8",
+        "message": "chore(AeroSleuth): update CHANGELOG.md, 2026-04-12-004-feat-epic00-infrastructur",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "7873854",
+        "message": "style(AeroSleuth): update next.config.ts, sentry.client.config.ts, error.tsx, er",
+        "additions": 42,
+        "deletions": 5
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "4c2e24c",
+        "message": "feat(AeroSleuth): update base.py, prod.py, staging.py, urls.py",
+        "additions": 34,
+        "deletions": 17
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "68511c6",
+        "message": "test(AeroSleuth): update test_health.py",
+        "additions": 63,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "9f1516d",
+        "message": "feat(monitoring): add frontend Sentry error tracking",
+        "additions": 2861,
+        "deletions": 1093
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "c0923e0",
+        "message": "feat(infra): complete Epic 00 infrastructure hardening",
+        "additions": 110,
+        "deletions": 7
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "e8de108",
+        "message": "fix(tests): add guardrails_open=False to DummySession in affected test files",
+        "additions": 5,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "54699f7",
+        "message": "fix(types): cast existing.status to str for mypy call-overload",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "431982b",
+        "message": "style: apply ruff format fixes",
+        "additions": 16,
+        "deletions": 15
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "901fc9a",
+        "message": "chore(qa): add direct dial and mode toggle test cases; mark plan completed",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "ed88873",
+        "message": "feat(ui): add Solar Sales / Open Ended mode toggle with localStorage persistence",
+        "additions": 106,
+        "deletions": 4
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "0781902",
+        "message": "feat: wire coaching_mode through API schema, dial endpoint, and frontend",
+        "additions": 54,
+        "deletions": 4
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "824defa",
+        "message": "refactor: convert GUARDRAILS_OPEN global to per-session coaching_mode on Session",
+        "additions": 51,
+        "deletions": 36
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "4298f5b",
+        "message": "fix: prevent stuck direct dial and clean up zombie call sessions",
+        "additions": 58,
+        "deletions": 5
+      },
+      {
+        "repo": "Benmore-Studio/ConnorW_Projects",
+        "sha": "d04cbc2",
+        "message": "Rev 1.3: Incorporate Latinovation contract review changes (April 8 meeting)",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "08c4fca",
+        "message": "Run both PR and commit trackers side by side",
+        "additions": 171,
+        "deletions": 1584
+      },
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "7eabc99",
+        "message": "Switch to commit-based LOC tracking (all repos, all branches)",
+        "additions": 185,
+        "deletions": 80
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "e9eafe2",
+        "message": "Make remote the default for loctest.py, remove --remote flag",
+        "additions": 16,
+        "deletions": 19
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "7a667ec",
+        "message": "Add commit-based LOC tracking \u2014 dual tracker setup with updated guides",
+        "additions": 714,
+        "deletions": 134
+      }
+    ]
+  },
+  {
+    "date": "2026-04-14",
+    "additions": 14024,
+    "deletions": 492,
+    "net": 13532,
+    "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "a24232b",
+        "message": "feat(onboarding): PDF upload for T&C and CV with text extraction",
+        "additions": 224,
+        "deletions": 16
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "ac05fe7",
+        "message": "fix(branding): rename 'Mediation Today' to 'MediationToday' across all user-faci",
+        "additions": 82,
+        "deletions": 82
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "b39ae11",
+        "message": "feat(onboarding): make missing field errors clickable \u2014 jump to the right step",
+        "additions": 36,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "4f8d4ae",
+        "message": "fix(onboarding): pre-populate all form fields when resuming mid-wizard",
+        "additions": 53,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "c4262c8",
+        "message": "fix(onboarding): show specific validation messages when content is too short",
+        "additions": 11,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "fe7ca5f",
+        "message": "fix(onboarding): unblock step 4 resume when half-day rate already saved",
+        "additions": 4,
+        "deletions": 5
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "4367ccd",
+        "message": "fix(onboarding): client-side validation for required fields with clear error mes",
+        "additions": 55,
+        "deletions": 11
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "db3eba5",
+        "message": "fix(onboarding): reliably redirect mediators with incomplete onboarding to wizar",
+        "additions": 33,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "211ad31",
+        "message": "feat(onboarding): require key profile fields and humanize missing field labels",
+        "additions": 61,
+        "deletions": 24
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "e5d8ba7",
+        "message": "fix(AeroSleuth): resolve all 19 Dependabot security alerts",
+        "additions": 198,
+        "deletions": 209
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "89a0d21",
+        "message": "fix(AeroSleuth): revert mock guard to fail-open \u2014 Vercel env var not baked in",
+        "additions": 9,
+        "deletions": 9
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "fdd9fb3",
+        "message": "fix(AeroSleuth): add NEXT_PUBLIC_ENABLE_MOCKS to Vercel \u2014 unblocks login",
+        "additions": 3,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "534340c",
+        "message": "fix(AeroSleuth): CI fixes \u2014 celery default, ruff lint, line length",
+        "additions": 11,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "dfb9d62",
+        "message": "style(AeroSleuth): update next-env.d.ts",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "f688caf",
+        "message": "fix(AeroSleuth): PR #36 audit fixes \u2014 security, performance, correctness, tests",
+        "additions": 13194,
+        "deletions": 82
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "1aff077",
+        "message": "fix(AeroSleuth): update disk health test \u2014 no longer reports MB in output",
+        "additions": 1,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "83a8483",
+        "message": "fix(AeroSleuth): health check shows details by default when no secret configured",
+        "additions": 46,
+        "deletions": 27
+      },
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "0f8994e",
+        "message": "Widen daily scan window from 1 to 7 days to catch late pushes",
+        "additions": 2,
+        "deletions": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-04-15",
+    "additions": 23436,
+    "deletions": 937,
+    "net": 22499,
+    "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "b023697",
+        "message": "feat(audit): add AuditLog model with full auth and profile event tracking",
+        "additions": 888,
+        "deletions": 8
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "4efb54f",
+        "message": "fix(auth): simplify post-login routing and prevent onboarding flash",
+        "additions": 20,
+        "deletions": 17
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "1c1bff5",
+        "message": "fix(auth): eliminate login\u2194onboarding redirect loop for new accounts",
+        "additions": 27,
+        "deletions": 11
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "f795f32",
+        "message": "test(admin): add end-to-end admin integration tests",
+        "additions": 184,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "44b6823",
+        "message": "feat(admin): enhanced MediatorProfileAdmin and AuditLogAdmin",
+        "additions": 466,
+        "deletions": 19
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "3c5606c",
+        "message": "feat(admin): custom AdminSite, UserAdmin bulk actions, DuplicateDetectionService",
+        "additions": 780,
+        "deletions": 16
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "d126fd1",
+        "message": "feat(pipeline): implement Epic 04 \u2014 FAA data ingestion pipeline",
+        "additions": 5823,
+        "deletions": 17
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "1bb16ca",
+        "message": "feat: add solar-specific acronym map for solar_sales calls",
+        "additions": 187,
+        "deletions": 113
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "67f763e",
+        "message": "feat: open-ended mode improvements + infrastructure fixes",
+        "additions": 289,
+        "deletions": 15
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "ededc00",
+        "message": "feat(pwa): update form components, stores, and types for intake form refinements",
+        "additions": 460,
+        "deletions": 411
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "e5dc5af",
+        "message": "fix: add id-token write permission to claude code review workflow",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "408f7d6",
+        "message": "chore(DigitalIntakeForm): update package-lock.json",
+        "additions": 61,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "c694916",
+        "message": "chore(DigitalIntakeForm): update package.json",
+        "additions": 7,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "bcb76e7",
+        "message": "style(DigitalIntakeForm): update page.tsx, layout.tsx, layout.tsx, page.tsx (+60",
+        "additions": 4644,
+        "deletions": 89
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "d59cfcd",
+        "message": "Align scaffold with PRODUCTION_PRACTICES and project scope",
+        "additions": 346,
+        "deletions": 53
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "5df7477",
+        "message": "Initial project setup: Django + Next.js + CI/CD + Docker",
+        "additions": 9050,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "a0f1fe1",
+        "message": "fix(frontend): audit fixes \u2014 security, correctness, performance, and UX improvem",
+        "additions": 202,
+        "deletions": 163
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "64448da",
+        "message": "fix: add id-token write permission to claude code review workflow",
+        "additions": 1,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "additions": 37,
+    "deletions": 17,
+    "net": 20,
+    "commits": [
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "d15ee15",
+        "message": "Switch find_active_repos to /user/repos to fix 401 with fine-grained PATs",
+        "additions": 37,
+        "deletions": 17
+      }
+    ]
+  }
+]
