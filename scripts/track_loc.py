@@ -1,7 +1,7 @@
 """
 track_loc - Tracks ALL commits across active repos and all branches.
-Uses the Events API to discover repos with recent pushes, then fetches
-per-repo commits for full coverage. No pip dependencies (stdlib only).
+Lists user-accessible repos sorted by push date to discover recent activity,
+then fetches per-repo commits for full coverage. No pip dependencies (stdlib only).
 """
 
 import json
@@ -57,21 +57,41 @@ def api_get_paginated(url, params=None, max_per_page=100):
     return all_items
 
 
-def find_active_repos():
-    """Use the Events API to find repos the user has recently pushed to."""
-    repos = set()
-    for page in range(1, 11):
-        events = api_get(
-            f"https://api.github.com/users/{USERNAME}/events",
-            {"per_page": 30, "page": page},
+def find_active_repos(since):
+    """List repos the authenticated user can access that were pushed since `since`.
+
+    Uses /user/repos sorted by pushed (desc), stopping once pushed_at < since.
+    Covers owned, collaborator, and org-member repos. Per-repo commit fetches
+    later filter to USERNAME's commits, so non-authored repos contribute nothing.
+    Works with fine-grained PATs (the Events API does not).
+    """
+    since_dt = datetime.strptime(since, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    repos = []
+    page = 1
+    while True:
+        items = api_get(
+            "https://api.github.com/user/repos",
+            {
+                "sort": "pushed",
+                "direction": "desc",
+                "affiliation": "owner,collaborator,organization_member",
+                "per_page": 100,
+                "page": page,
+            },
         )
-        if not events:
+        if not items:
             break
-        for event in events:
-            if event.get("type") == "PushEvent":
-                repos.add(event["repo"]["name"])
-        if len(events) < 30:
+        for r in items:
+            pushed_at = r.get("pushed_at")
+            if not pushed_at:
+                continue
+            pushed_dt = datetime.strptime(pushed_at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            if pushed_dt < since_dt:
+                return sorted(repos)
+            repos.append(r["full_name"])
+        if len(items) < 100:
             break
+        page += 1
     return sorted(repos)
 
 
@@ -121,9 +141,9 @@ today = datetime.now(timezone.utc)
 since = (today - timedelta(days=DAYS_BACK)).strftime("%Y-%m-%dT00:00:00Z")
 until = (today + timedelta(days=1)).strftime("%Y-%m-%dT00:00:00Z")
 
-# Discover repos from push events
-print(f"Finding repos {USERNAME} has pushed to...")
-repos = find_active_repos()
+# Discover recently-pushed repos accessible to the authenticated user
+print(f"Finding repos {USERNAME} has access to that were pushed since {since}...")
+repos = find_active_repos(since)
 print(f"Active repos: {', '.join(repos)}\n")
 
 # Collect all commits across repos, grouped by date
