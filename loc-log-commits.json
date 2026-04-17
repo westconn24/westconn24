@@ -1084,150 +1084,228 @@
   },
   {
     "date": "2026-04-15",
-    "additions": 23436,
-    "deletions": 937,
-    "net": 22499,
+    "additions": 5823,
+    "deletions": 17,
+    "net": 5806,
     "commits": [
-      {
-        "repo": "Benmore-Studio/149-MediationToday",
-        "sha": "b023697",
-        "message": "feat(audit): add AuditLog model with full auth and profile event tracking",
-        "additions": 888,
-        "deletions": 8
-      },
-      {
-        "repo": "Benmore-Studio/149-MediationToday",
-        "sha": "4efb54f",
-        "message": "fix(auth): simplify post-login routing and prevent onboarding flash",
-        "additions": 20,
-        "deletions": 17
-      },
-      {
-        "repo": "Benmore-Studio/149-MediationToday",
-        "sha": "1c1bff5",
-        "message": "fix(auth): eliminate login\u2194onboarding redirect loop for new accounts",
-        "additions": 27,
-        "deletions": 11
-      },
-      {
-        "repo": "Benmore-Studio/149-MediationToday",
-        "sha": "f795f32",
-        "message": "test(admin): add end-to-end admin integration tests",
-        "additions": 184,
-        "deletions": 0
-      },
-      {
-        "repo": "Benmore-Studio/149-MediationToday",
-        "sha": "44b6823",
-        "message": "feat(admin): enhanced MediatorProfileAdmin and AuditLogAdmin",
-        "additions": 466,
-        "deletions": 19
-      },
-      {
-        "repo": "Benmore-Studio/149-MediationToday",
-        "sha": "3c5606c",
-        "message": "feat(admin): custom AdminSite, UserAdmin bulk actions, DuplicateDetectionService",
-        "additions": 780,
-        "deletions": 16
-      },
       {
         "repo": "Benmore-Studio/162-AeroSleuth",
         "sha": "d126fd1",
         "message": "feat(pipeline): implement Epic 04 \u2014 FAA data ingestion pipeline",
         "additions": 5823,
         "deletions": 17
-      },
-      {
-        "repo": "Benmore-Studio/165-CallAssist",
-        "sha": "1bb16ca",
-        "message": "feat: add solar-specific acronym map for solar_sales calls",
-        "additions": 187,
-        "deletions": 113
-      },
-      {
-        "repo": "Benmore-Studio/165-CallAssist",
-        "sha": "67f763e",
-        "message": "feat: open-ended mode improvements + infrastructure fixes",
-        "additions": 289,
-        "deletions": 15
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "ededc00",
-        "message": "feat(pwa): update form components, stores, and types for intake form refinements",
-        "additions": 460,
-        "deletions": 411
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "e5dc5af",
-        "message": "fix: add id-token write permission to claude code review workflow",
-        "additions": 1,
-        "deletions": 0
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "408f7d6",
-        "message": "chore(DigitalIntakeForm): update package-lock.json",
-        "additions": 61,
-        "deletions": 3
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "c694916",
-        "message": "chore(DigitalIntakeForm): update package.json",
-        "additions": 7,
-        "deletions": 2
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "bcb76e7",
-        "message": "style(DigitalIntakeForm): update page.tsx, layout.tsx, layout.tsx, page.tsx (+60",
-        "additions": 4644,
-        "deletions": 89
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "d59cfcd",
-        "message": "Align scaffold with PRODUCTION_PRACTICES and project scope",
-        "additions": 346,
-        "deletions": 53
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "5df7477",
-        "message": "Initial project setup: Django + Next.js + CI/CD + Docker",
-        "additions": 9050,
-        "deletions": 0
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "a0f1fe1",
-        "message": "fix(frontend): audit fixes \u2014 security, correctness, performance, and UX improvem",
-        "additions": 202,
-        "deletions": 163
-      },
-      {
-        "repo": "Benmore-Studio/166-DigitalIntakeForm",
-        "sha": "64448da",
-        "message": "fix: add id-token write permission to claude code review workflow",
-        "additions": 1,
-        "deletions": 0
       }
     ]
   },
   {
     "date": "2026-04-16",
-    "additions": 37,
-    "deletions": 17,
-    "net": 20,
+    "additions": 44459,
+    "deletions": 313,
+    "net": 44146,
     "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "1551e5a",
+        "message": "test(admin): add full-path integration tests for Epic 5",
+        "additions": 2478,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "12c188e",
+        "message": "chore: ignore local docs/handoffs/ session notes",
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "7c7f1d5",
+        "message": "fix(pipeline): Epic 04 audit \u2014 close data-integrity gaps, extend integration tes",
+        "additions": 4360,
+        "deletions": 87
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "sha": "066b9db",
+        "message": "Initial project setup: Django + Next.js + CI/CD + Docker",
+        "additions": 9129,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "sha": "df39ef0",
+        "message": "Frontend scaffold \u2014 Phase 1 route manifest, design system, PPA + CRM + data room",
+        "additions": 28452,
+        "deletions": 209
+      },
       {
         "repo": "westconn24/westconn24",
         "sha": "d15ee15",
         "message": "Switch find_active_repos to /user/repos to fix 401 with fine-grained PATs",
         "additions": 37,
         "deletions": 17
+      }
+    ]
+  },
+  {
+    "date": "2026-04-17",
+    "additions": 49235,
+    "deletions": 256,
+    "net": 48979,
+    "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "0666f04",
+        "message": "test(mediators): cover PDF extraction endpoint and view/admin edge branches",
+        "additions": 330,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "fc1b82f",
+        "message": "docs(MediationToday): add 301 docstrings across 16 files",
+        "additions": 1479,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "41a1ab7",
+        "message": "test(mediators): cover tasks.py email + cloudinary stub; fix mypy on full_path t",
+        "additions": 241,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "8cbe2b4",
+        "message": "docs(admin): update Epic 5 spec, add implementation plan and comprehensive admin",
+        "additions": 2820,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "fc80636",
+        "message": "style(tests): apply ruff format drift to test_provider_base.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "08861d7",
+        "message": "test(comparison): pin ComparisonResult + ComparisonRecord invariants",
+        "additions": 283,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "fffea44",
+        "message": "test(enrichment): pin EnrichmentCall + EnrichmentFailure invariants",
+        "additions": 294,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "ff1e765",
+        "message": "test(enrichment): race-safety + edge cases for BudgetConfig.record_spend",
+        "additions": 220,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "766c3f3",
+        "message": "test(corporate): cover CorporateEntity model invariants",
+        "additions": 340,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "83e0106",
+        "message": "feat(enrichment): implement compute_cost_snapshot aggregation + tests",
+        "additions": 567,
+        "deletions": 7
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "ec89a8d",
+        "message": "test(enrichment): cover BatchData property provider with mocked httpx",
+        "additions": 255,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "3938cf3",
+        "message": "test(enrichment): cover ATTOM property provider with mocked httpx",
+        "additions": 265,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "e11aeef",
+        "message": "test(enrichment): cover Data Axle provider with mocked httpx",
+        "additions": 316,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "e8cdd8b",
+        "message": "test(enrichment): cover EnformionGO provider with mocked httpx",
+        "additions": 394,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "c7f73c3",
+        "message": "docs(AeroSleuth): add docstrings to backend/apps/pipeline/admin.py, backend/apps",
+        "additions": 1244,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "9b6ce12",
+        "message": "test(enrichment): cover provider abstraction layer + resolvers",
+        "additions": 379,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "f6e7e20",
+        "message": "fix(pipeline): make _batch_iter generic over element type",
+        "additions": 8,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "14ac0ac",
+        "message": "style(backend): apply ruff format to config/settings/base.py",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "repo": "Benmore-Studio/165-CallAssist",
+        "sha": "32f3ff0",
+        "message": "docs(CallAssist): add docstrings to alembic/env.py, alembic/versions/0db018f399c",
+        "additions": 15360,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/Measured_HRIS_178",
+        "sha": "276295d",
+        "message": "Populate context/ with canonical project docs for dev team",
+        "additions": 7410,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/Measured_HRIS_178",
+        "sha": "4e8c50c",
+        "message": "Populate context/ with canonical project docs for dev team",
+        "additions": 7410,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "sha": "1400b93",
+        "message": "Harden frontend to full Phase 1 parity \u2014 crashes fixed, routes filled, sub-featu",
+        "additions": 9616,
+        "deletions": 237
       }
     ]
   }
