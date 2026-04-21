@@ -642,6 +642,70 @@
   },
   {
     "date": "2026-04-20",
+    "additions": 135649,
+    "deletions": 2535,
+    "net": 133114,
+    "prs": [
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 39,
+        "title": "Promote dev to main: Epic 04 data ingestion + Gary filter UX",
+        "additions": 15320,
+        "deletions": 195
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 38,
+        "title": "feat(filters): Certifications Type -> Level -> Rating hierarchy",
+        "additions": 626,
+        "deletions": 143
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "pr": 2,
+        "title": "dev \u2192 main: Phase 1 frontend scaffold + hardening + docs",
+        "additions": 46682,
+        "deletions": 263
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "pr": 1,
+        "title": "Frontend: Phase 1 scaffold + full hardening pass",
+        "additions": 46682,
+        "deletions": 263
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "pr": 37,
+        "title": "feat(epic-04): FAA data ingestion pipeline",
+        "additions": 14694,
+        "deletions": 52
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "pr": 11,
+        "title": "feat(admin): Epic 5 \u2014 Admin Panel (branding, mediator approval, audit log, duplicate detection)",
+        "additions": 9086,
+        "deletions": 201
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "pr": 3,
+        "title": "fix(frontend): audit fixes \u2014 security, correctness, performance, UX",
+        "additions": 1073,
+        "deletions": 527
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "pr": 2,
+        "title": "feat(pwa): intake form component and store refinements",
+        "additions": 1486,
+        "deletions": 891
+      }
+    ]
+  },
+  {
+    "date": "2026-04-21",
     "additions": 0,
     "deletions": 0,
     "net": 0,

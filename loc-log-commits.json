@@ -1325,6 +1325,168 @@
   },
   {
     "date": "2026-04-20",
+    "additions": 12776,
+    "deletions": 2885,
+    "net": 9891,
+    "commits": [
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "6412fcd",
+        "message": "fix(heroku): run collectstatic at build time via bin/post_compile",
+        "additions": 22,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "9476045",
+        "message": "chore(tooling): bump pre-commit ruff to v0.15.9 and reformat",
+        "additions": 13,
+        "deletions": 13
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "ce61247",
+        "message": "style: ruff format 4 files missed by pre-commit",
+        "additions": 1,
+        "deletions": 5
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "26d5361",
+        "message": "docs(epic-5): update CLAUDE.md, CHANGELOG, README for admin panel completion",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/149-MediationToday",
+        "sha": "fbfdddb",
+        "message": "fix(epic-5): address PR audit findings \u2014 security, correctness, production harde",
+        "additions": 700,
+        "deletions": 548
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "a74b1f2",
+        "message": "feat(filters): restructure Certifications into Type -> Level -> Rating",
+        "additions": 626,
+        "deletions": 143
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "9a4ae22",
+        "message": "fix(health): check /tmp instead of / and raise threshold to 500MB",
+        "additions": 21,
+        "deletions": 17
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "f9e943f",
+        "message": "fix(staging): disable CELERY_TASK_ALWAYS_EAGER now that worker dyno is live",
+        "additions": 6,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "6b6b91e",
+        "message": "fix(settings): bump Postgres connect_timeout to 15s",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "be506e2",
+        "message": "fix(celery): remove unsupported description key from beat schedule",
+        "additions": 5,
+        "deletions": 4
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "27b59a3",
+        "message": "chore(procfile): enable worker + beat dynos for Epic 04 monthly pipeline",
+        "additions": 3,
+        "deletions": 4
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "958af9e",
+        "message": "fix(auth): kill stale PWA service worker and hard-navigate after login",
+        "additions": 60,
+        "deletions": 8
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "ba1a5ef",
+        "message": "chore(deps): bump hono to 4.12.14, protocol-buffers-schema to 3.6.1",
+        "additions": 6,
+        "deletions": 6
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "58f6d9b",
+        "message": "chore(prod): trigger rebuild to run collectstatic",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/162-AeroSleuth",
+        "sha": "7d3fe55",
+        "message": "fix(prod): disable CELERY_TASK_ALWAYS_EAGER now that worker dyno is live",
+        "additions": 2,
+        "deletions": 4
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "c6b85fe",
+        "message": "fix(csp): allow Vercel Toolbar on preview deployments",
+        "additions": 20,
+        "deletions": 7
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "1b77ba2",
+        "message": "chore(deploy): move vercel.json to frontend/ now that rootDirectory=frontend",
+        "additions": 9,
+        "deletions": 13
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "46be76f",
+        "message": "chore(deploy): add vercel.json with monorepo build config",
+        "additions": 13,
+        "deletions": 0
+      },
+      {
+        "repo": "Benmore-Studio/166-DigitalIntakeForm",
+        "sha": "3d173ac",
+        "message": "fix(frontend): audit fixes \u2014 security, correctness, performance, UX (#3)",
+        "additions": 1073,
+        "deletions": 527
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "sha": "660a28f",
+        "message": "Skip Claude review job cleanly when CLAUDE_CODE_OAUTH_TOKEN is unset",
+        "additions": 16,
+        "deletions": 2
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "sha": "7e1b222",
+        "message": "Fix claude-code-review workflow auth \u2014 add id-token, use OAuth token",
+        "additions": 3,
+        "deletions": 1
+      },
+      {
+        "repo": "Benmore-Studio/eVillage",
+        "sha": "f897850",
+        "message": "Productionize frontend-start \u2014 fix bugs, wire security, add docs + CI",
+        "additions": 10175,
+        "deletions": 1574
+      }
+    ]
+  },
+  {
+    "date": "2026-04-21",
     "additions": 0,
     "deletions": 0,
     "net": 0,
