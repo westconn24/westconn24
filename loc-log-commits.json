@@ -1544,6 +1544,308 @@
   },
   {
     "date": "2026-04-28",
+    "additions": 4980,
+    "deletions": 118,
+    "net": 4862,
+    "commits": [
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "89e66cd",
+        "message": "build(reel): render preview-build deliverables (16:9, 1:1, 9:16) \u2014 30s, ~3MB eac",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "dde0ab1",
+        "message": "feat(reel): preview build \u2014 placeholder screens, registerRoot wiring, working Re",
+        "additions": 3768,
+        "deletions": 60
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "e28c427",
+        "message": "chore(home): add data-testid to hero wordmark",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "11455db",
+        "message": "chore(calendar): add data-testid to dashboard calendar day cells",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "8256d54",
+        "message": "chore(toast): wrap Toaster in data-testid wrapper for capture pipeline",
+        "additions": 15,
+        "deletions": 13
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "3fffa81",
+        "message": "chore(booking): add data-testid to booking verify success state",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "3ac38b5",
+        "message": "chore(booking): add data-testid attributes to booking form for capture pipeline",
+        "additions": 5,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "3401ff3",
+        "message": "chore(search): add data-testid to search result cards",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "e99b21c",
+        "message": "chore(onboarding): add data-testid attributes for capture pipeline",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "2ca753f",
+        "message": "docs(reel): add operator runbook for capture, render, and GitHub recovery",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "0ea77dd",
+        "message": "docs(reel): capture and render runbooks",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "3dbf95b",
+        "message": "feat(reel): add render.sh \u2014 Twitter-optimized FFmpeg encode for all three delive",
+        "additions": 41,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "e8af1f9",
+        "message": "feat(reel): aspect-ratio-aware scenes (16:9 / 1:1 / 9:16)",
+        "additions": 150,
+        "deletions": 40
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "2bfe94b",
+        "message": "feat(reel): wire eight scenes into 16:9 composition",
+        "additions": 27,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "55680c9",
+        "message": "feat(reel): add Endcap scene",
+        "additions": 24,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "8ee0ba8",
+        "message": "feat(reel): add CalendarFills scene",
+        "additions": 13,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "77d2d33",
+        "message": "feat(reel): add BookingLands scene",
+        "additions": 22,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "fc06ef8",
+        "message": "feat(reel): add DiscoveryNeutral scene",
+        "additions": 17,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "25ecf73",
+        "message": "feat(reel): add ProfileLive scene",
+        "additions": 34,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "5ce2f8b",
+        "message": "feat(reel): add OnboardingMontage scene",
+        "additions": 33,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "fc253c2",
+        "message": "feat(reel): add Promise scene",
+        "additions": 12,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "125e915",
+        "message": "feat(reel): add ColdOpen scene",
+        "additions": 17,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "0680477",
+        "message": "feat(reel): add overlay primitives \u2014 KineticTitle, Wordmark, ColorGrade",
+        "additions": 89,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "eb0cb84",
+        "message": "feat(capture): add isolated search-bar route for capture pipeline",
+        "additions": 20,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "0ec75a1",
+        "message": "feat(capture): add shot 12",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "e03635e",
+        "message": "feat(capture): add shot 11",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "31ffa36",
+        "message": "feat(capture): add shot 10",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "e068ec5",
+        "message": "feat(capture): add shot 09",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "cc315bb",
+        "message": "feat(capture): add shot 08",
+        "additions": 19,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "4be5e8d",
+        "message": "feat(capture): add shot 07",
+        "additions": 16,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "37e9df0",
+        "message": "feat(capture): add onboarding shot 05",
+        "additions": 17,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "8a0b772",
+        "message": "feat(capture): add onboarding shot 04",
+        "additions": 14,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "7639c8d",
+        "message": "feat(capture): add onboarding shot 03",
+        "additions": 12,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "158ab91",
+        "message": "feat(capture): add onboarding shot 02",
+        "additions": 14,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "0f4636f",
+        "message": "feat(capture): add onboarding shot 01",
+        "additions": 16,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "8e9875c",
+        "message": "feat(capture): add shot 06 \u2014 profile live (anchor capture)",
+        "additions": 16,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "f7a0581",
+        "message": "feat(capture): scaffold Playwright capture orchestrator with humanize + easing h",
+        "additions": 158,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "09e7251",
+        "message": "feat(seed): add seed_demo_reel command for launch reel capture",
+        "additions": 175,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "bb2dcfa",
+        "message": "feat(reel): add three aspect-ratio composition shells (16:9, 1:1, 9:16)",
+        "additions": 30,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "311fcdc",
+        "message": "feat(reel): add theme primitives \u2014 brand colors, font families, easing curves",
+        "additions": 62,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "833a3c1",
+        "message": "feat(reel): scaffold Remotion project with three aspect-ratio compositions",
+        "additions": 85,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "90461e0",
+        "message": "docs(reel): add launch reel design spec and implementation plan",
+        "additions": 0,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-29",
     "additions": 0,
     "deletions": 0,
     "net": 0,
