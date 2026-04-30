@@ -1846,9 +1846,291 @@
   },
   {
     "date": "2026-04-29",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "commits": []
+    "additions": 2211,
+    "deletions": 292,
+    "net": 1919,
+    "commits": [
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "ff3ac8e",
+        "message": "build(reel): render v9 \u2014 flat screens, both corners masked",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "a95abf7",
+        "message": "fix(reel): remove Ken Burns zooms (per user \u2014 making screens unreadable), mask b",
+        "additions": 56,
+        "deletions": 78
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "2a09ef4",
+        "message": "build(reel): render v8 derivatives (1:1, 9:16)",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "e50c6e4",
+        "message": "build(reel): render v8 \u2014 100% real-screen coverage for every content beat + corn",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "490bbc5",
+        "message": "feat(reel): integrate all 5 real onboarding wizard step captures into Onboarding",
+        "additions": 15,
+        "deletions": 26
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "af3ff44",
+        "message": "feat(reel): capture all 5 onboarding wizard steps as separate clips",
+        "additions": 393,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "c715a80",
+        "message": "fix(reel): mask Next.js dev indicator from captures + disable it in next.config",
+        "additions": 49,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "6b5779e",
+        "message": "build(reel): render v7 \u2014 real screens for booking flow + calendar dashboard",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "a469cd9",
+        "message": "feat(reel): integrate real dashboard-calendar, book-form, and notifications capt",
+        "additions": 45,
+        "deletions": 14
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "ffccbda",
+        "message": "build(reel): render v6 derivatives (1:1, 9:16)",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "5377ce7",
+        "message": "feat(reel): capture authenticated dashboard + booking flow shots",
+        "additions": 166,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "dd010b9",
+        "message": "feat(middleware): allow capture-mode bypass for screenshot pipeline",
+        "additions": 22,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "36247ef",
+        "message": "build(reel): render v6 \u2014 load-skeleton trims, retimed onboarding title",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "167d731",
+        "message": "fix(reel): glitch fixes \u2014 startFrom=20 trims load skeletons from real captures, ",
+        "additions": 21,
+        "deletions": 5
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "5800501",
+        "message": "build(reel): render v5 \u2014 16:9 with backdrop texture + shimmer",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "fd3d7eb",
+        "message": "feat(reel): iterate v5 \u2014 for-mediators ambient backdrop in Promise, shimmer swee",
+        "additions": 43,
+        "deletions": 6
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "1aef891",
+        "message": "build(reel): render v4 derivatives (1:1, 9:16)",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "17fe987",
+        "message": "build(reel): render v4 \u2014 16:9 with Ken Burns motion on real captures",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "1610d54",
+        "message": "feat(reel): iterate v4 \u2014 KenBurns slow-zoom over real-screen captures for cinema",
+        "additions": 65,
+        "deletions": 10
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "efe7f17",
+        "message": "build(reel): render v3 derivatives (1:1, 9:16)",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "69d41b3",
+        "message": "build(reel): render v3 \u2014 real screens for ProfileLive/DiscoveryNeutral/Onboardin",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "48addc5",
+        "message": "feat(reel): integrate real Next.js captures \u2014 mediator profile, search, mediator",
+        "additions": 42,
+        "deletions": 15
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "4a2102f",
+        "message": "feat(reel): capture real homepage, search, profile, onboarding screens via Playw",
+        "additions": 869,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "e90024f",
+        "message": "feat(reel): iterate v2 \u2014 letter-stagger wordmark, word-stagger blur-in titles, l",
+        "additions": 425,
+        "deletions": 136
+      }
+    ]
+  },
+  {
+    "date": "2026-04-30",
+    "additions": 1193,
+    "deletions": 363,
+    "net": 830,
+    "commits": [
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "385a8a4",
+        "message": "chore: gitignore .claire / .claude / .git-nested-backup; commit npm install lock",
+        "additions": 9,
+        "deletions": 177
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "772dcd0",
+        "message": "build(reel): render v14 \u2014 1:1 + 9:16 use mobile captures rendered in phone-shape",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "437b796",
+        "message": "feat(capture): mobile-viewport captures (390x844) for 1:1 + 9:16 compositions",
+        "additions": 534,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "429a3a8",
+        "message": "feat(reel): aspect-ratio-aware capture sources + phone-shaped device chrome for ",
+        "additions": 84,
+        "deletions": 49
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "931a95a",
+        "message": "build(reel): render v13 derivatives (1:1, 9:16) with populated calendar + notifi",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "288ebfe",
+        "message": "docs(reel): comprehensive session handoff covering all decisions, files, iterati",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "9bb0728",
+        "message": "build(reel): render v13 \u2014 calendar + notifications now visually populated (Smith",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "d0d92f4",
+        "message": "feat(reel): re-capture dashboard calendar + notifications with content visible",
+        "additions": 194,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "7c41602",
+        "message": "feat(reel): seed dashboard calendar + notifications when capture-mode is on",
+        "additions": 104,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "0b52fcd",
+        "message": "build(reel): render v12 \u2014 text scrim under titles, dark-aware variant for Profil",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "c438403",
+        "message": "fix(reel): kinetic-title scrim + text-shadow for guaranteed contrast against bus",
+        "additions": 84,
+        "deletions": 53
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "b1ba96d",
+        "message": "build(reel): render v11 \u2014 calendar-pause fix + stronger corner masks",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "d71bd6f",
+        "message": "fix(reel): bigger/more-solid corner mask hides Next.js dev badge; remove white-f",
+        "additions": 12,
+        "deletions": 34
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "ea826a5",
+        "message": "build(reel): render v10 \u2014 floating 3D devices on stage backdrop",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "sha": "f6abace",
+        "message": "feat(reel): Apple-launch 3D floating-device aesthetic \u2014 perspective tilt, soft s",
+        "additions": 172,
+        "deletions": 49
+      }
+    ]
   }
 ]
