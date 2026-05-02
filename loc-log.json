@@ -784,6 +784,21 @@
   },
   {
     "date": "2026-05-01",
+    "additions": 1137,
+    "deletions": 0,
+    "net": 1137,
+    "prs": [
+      {
+        "repo": "westconn24/149-MediationToday-archive",
+        "pr": 2,
+        "title": "test: backfill coverage for throttles, pagination, exception handler, registration role contract",
+        "additions": 1137,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02",
     "additions": 0,
     "deletions": 0,
     "net": 0,
