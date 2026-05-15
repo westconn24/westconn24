@@ -3348,9 +3348,158 @@
   },
   {
     "date": "2026-05-14",
-    "additions": 0,
-    "deletions": 0,
-    "net": 0,
-    "commits": []
+    "additions": 38490,
+    "deletions": 173,
+    "net": 38317,
+    "commits": [
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "5d91926",
+        "message": "Update code-phase status: epics 1-4 complete & verified",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1cfacd9",
+        "message": "Epic 4: notifications infrastructure",
+        "additions": 5214,
+        "deletions": 12
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "ce8ef74",
+        "message": "Epic 3: core data model",
+        "additions": 8402,
+        "deletions": 21
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "727ffcf",
+        "message": "Epic 2: authentication & authorization",
+        "additions": 1998,
+        "deletions": 41
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "378eadb",
+        "message": "Epic 1: project scaffolding & foundation",
+        "additions": 15686,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "f937780",
+        "message": "Initial commit: project .gitignore",
+        "additions": 80,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "f1c405d",
+        "message": "Epic 6 (tests): full Google Calendar test suite",
+        "additions": 1902,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "b66c9ef",
+        "message": "Epic 6 (HTTP layer): OAuth views, webhook, Celery tasks, availability API",
+        "additions": 1166,
+        "deletions": 46
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "7fbc04c",
+        "message": "Epic 6 (service layer): gcal_service + availability_service",
+        "additions": 1279,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "b6cdc69",
+        "message": "Epic 6 (foundation): Google Calendar model fields, migrations, deps, config",
+        "additions": 305,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "d1df510",
+        "message": "Update code-phase status: Epic 5 complete & verified",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "41fcc8c",
+        "message": "Epic 5: Settings, Pricebook & Operator Console",
+        "additions": 2439,
+        "deletions": 42
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "331c81c",
+        "message": "Fix non-deterministic ActivityLog signal tests",
+        "additions": 10,
+        "deletions": 4
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "bc14e65",
+        "message": "Fix transient-error retry path for directly-called notification tasks",
+        "additions": 9,
+        "deletions": 4
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1066a22",
+        "message": "Add code-build handoff doc at epics 1-4 -> 5-9 boundary",
+        "additions": 0,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-15",
+    "additions": 2455,
+    "deletions": 14,
+    "net": 2441,
+    "commits": [
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "5410421",
+        "message": "Epic 7 (booking spine + tasks + HTTP stubs): BookingService.create/reschedule/ca",
+        "additions": 1631,
+        "deletions": 4
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "10295bb",
+        "message": "Epic 7 (service layer): slot_lock + hub_token services",
+        "additions": 575,
+        "deletions": 4
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "e21a60f",
+        "message": "Epic 7 (foundation): SlotHold fields, exceptions, config",
+        "additions": 196,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "e6d45af",
+        "message": "Update code-phase status: Epic 6 complete & verified",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1f162da",
+        "message": "Fix naive-UTC creds.expiry shifted by TIME_ZONE on persist",
+        "additions": 53,
+        "deletions": 4
+      }
+    ]
   }
 ]
