@@ -3461,10 +3461,395 @@
   },
   {
     "date": "2026-05-15",
-    "additions": 2455,
-    "deletions": 14,
-    "net": 2441,
+    "additions": 19012,
+    "deletions": 1664,
+    "net": 17348,
     "commits": [
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "373d737",
+        "message": "Advance docstring state: next_task_id=442 (20 edits, 14 commits)",
+        "additions": 20,
+        "deletions": 20
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "93de853",
+        "message": "Add module docstring to auth.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "cbe2d0a",
+        "message": "Add docstrings to apps.py",
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "ed174a7",
+        "message": "Add docstrings across models.py, __init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "3036e8a",
+        "message": "Add docstring to Meta in models.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "a12836a",
+        "message": "Add docstrings to models.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "3112a00",
+        "message": "Add docstring to Meta in models.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "50f72f2",
+        "message": "Add docstring to Status in models.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "64c5795",
+        "message": "Add docstrings across apps.py, models.py",
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "a1d873e",
+        "message": "Add module docstring to apps.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "2f111b3",
+        "message": "Add docstrings across models.py, __init__.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "8ad1bed",
+        "message": "Add docstrings to models.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "8d8ef2a",
+        "message": "Add docstring to EntityType in models.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "76a4244",
+        "message": "Add docstring to AircraftManager in models.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "1984ab6",
+        "message": "Add module docstring to models.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "cc2d3f4",
+        "message": "STATUS: document marketing-site UI revamp pass",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "03bf4cd",
+        "message": "Home hero: decorative coordinate label in upper-right corner",
+        "additions": 5,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "7cd32dc",
+        "message": "E2E smoke: route-level coverage for every static + dynamic slug",
+        "additions": 102,
+        "deletions": 12
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "f6b205a",
+        "message": "DropdownMenu: paper surface + mono labels + ink hairline separator",
+        "additions": 8,
+        "deletions": 8
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "d7ca063",
+        "message": "Sonner: institutional toast \u2014 paper + navy left-rule + state colors",
+        "additions": 14,
+        "deletions": 4
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "8632ba9",
+        "message": "Dialog: navy-deep overlay + corner-tick paper content + serif title",
+        "additions": 5,
+        "deletions": 5
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "53e33a0",
+        "message": "Final location-targeting sweep: .env example + Places placeholder",
+        "additions": 8,
+        "deletions": 8
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "53c6aee",
+        "message": "Select: square paper-on-paper trigger, sharp-edge dropdown menu",
+        "additions": 4,
+        "deletions": 4
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "5f2c9d6",
+        "message": "RadioGroup + Checkbox: square institutional controls",
+        "additions": 14,
+        "deletions": 8
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "8e0acfc",
+        "message": "Tailwind: add signal-green/signal-red brand tokens",
+        "additions": 6,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "d8c630a",
+        "message": "Dashboard: institutional console with status-colored API proof line",
+        "additions": 71,
+        "deletions": 14
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "dc35f62",
+        "message": "Dashboard signin + global-error: institutional shell",
+        "additions": 155,
+        "deletions": 18
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "3605292",
+        "message": "Out-of-area: editorial confirmation + framed paper card",
+        "additions": 32,
+        "deletions": 34
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "3db1f2e",
+        "message": "Quote confirmation + countdown: institutional finishing details",
+        "additions": 56,
+        "deletions": 77
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "f269d25",
+        "message": "Quote slot picker + review: institutional editorial styling",
+        "additions": 111,
+        "deletions": 81
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "c37b4c2",
+        "message": "Quote Step 2: serif section headers + ruled footer",
+        "additions": 15,
+        "deletions": 5
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "eebd310",
+        "message": "Quote Step 1: institutional radio cards + paper-on-paper grid",
+        "additions": 46,
+        "deletions": 44
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "b9c0d48",
+        "message": "Quote: phone placeholder + error toast move from 312 to 708",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "827f57d",
+        "message": "Quote flow: institutional shell + step indicator",
+        "additions": 156,
+        "deletions": 31
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1a3a74d",
+        "message": "UI primitives: institutional sharp-edge Button, Input, Card, Label",
+        "additions": 43,
+        "deletions": 17
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1b7cd9c",
+        "message": "Privacy + Terms + 404: numbered editorial layout",
+        "additions": 346,
+        "deletions": 109
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "832982c",
+        "message": "About/Contact/FAQ/Gallery: editorial rebuilds",
+        "additions": 593,
+        "deletions": 200
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1575671",
+        "message": "Areas: new index with stylized map + rebuilt city detail",
+        "additions": 448,
+        "deletions": 106
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1ea7433",
+        "message": "Services: editorial index + rebuilt service detail pages",
+        "additions": 375,
+        "deletions": 140
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "ab95829",
+        "message": "Home: editorial composition with 5-step hero, methodology, ledger grids",
+        "additions": 277,
+        "deletions": 122
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "e5e43c1",
+        "message": "CloudinaryImage: institutional SVG schematic placeholders",
+        "additions": 141,
+        "deletions": 9
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "5b382aa",
+        "message": "Components: editorial cards (Service/Area/Testimonial)",
+        "additions": 106,
+        "deletions": 59
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "ef1fc12",
+        "message": "Shell: institutional nav, footer, CTA strip + custom logomark",
+        "additions": 455,
+        "deletions": 325
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "5b574b4",
+        "message": "Services: scope copy to south/southwest suburbs",
+        "additions": 11,
+        "deletions": 3
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "9d0a092",
+        "message": "Areas: relocate to south/southwest Chicago suburbs",
+        "additions": 117,
+        "deletions": 109
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "b027f82",
+        "message": "Brand foundation: Columbia palette, Source Serif + Inter + JetBrains Mono",
+        "additions": 2034,
+        "deletions": 47
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "00aae7b",
+        "message": "gitignore: cover frontend/.tmp/ (OpenNext Windows TMPDIR workaround)",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "165ddf7",
+        "message": "Update STATUS + HANDOFF: Epic 9 complete + robust pass green",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "d9c8a96",
+        "message": "Epic 9: marketing website (20 routes, SEO, JSON-LD, sitemap, robots)",
+        "additions": 2290,
+        "deletions": 14
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "f45f31c",
+        "message": "Update code-phase status: Epic 8 complete & verified",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "1ffa79c",
+        "message": "Epic 8 (tests): full Epic 8 backend + frontend test suite",
+        "additions": 2534,
+        "deletions": 3
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "22e48a8",
+        "message": "Epic 8 (frontend): /quote multi-step booking flow",
+        "additions": 2837,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "828c8a2",
+        "message": "Epic 8 (backend additions): ics_service, anti-spam, turnstile, new views",
+        "additions": 889,
+        "deletions": 11
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "ea83e25",
+        "message": "Update code-phase status: Epic 7 complete & verified",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/blake-startup-code",
+        "sha": "a99d2d9",
+        "message": "Epic 7 (tests): full slot-lock + booking + reminder + view test suite",
+        "additions": 2204,
+        "deletions": 0
+      },
       {
         "repo": "westconn24/blake-startup-code",
         "sha": "5410421",
@@ -3501,5 +3886,12 @@
         "deletions": 4
       }
     ]
+  },
+  {
+    "date": "2026-05-16",
+    "additions": 0,
+    "deletions": 0,
+    "net": 0,
+    "commits": []
   }
 ]
