@@ -10184,5 +10184,307 @@
     "deletions": 0,
     "net": 0,
     "commits": []
+  },
+  {
+    "date": "2026-08-06",
+    "additions": 22949,
+    "deletions": 40,
+    "net": 22909,
+    "commits": [
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "be4309e",
+        "message": "Advance docstring state: next_task_id=1774 (20 edits, 15 commits)",
+        "additions": 21,
+        "deletions": 20
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "3308863",
+        "message": "Add docstring to test_assert_default_partition_empty_skips in test_tasks.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "e674c11",
+        "message": "Add docstrings to test_tasks.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "c59668f",
+        "message": "Add docstring to _require_sqlite in test_tasks.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "3005d36",
+        "message": "Add docstring to test_every_audit_mixin_has_post_delete_handler in test_signal_w",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "397fc0b",
+        "message": "Add docstring to test_every_audit_mixin_has_post_save_handler in test_signal_wir",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "dcee784",
+        "message": "Add docstrings to test_signal_wiring.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "8f6a84d",
+        "message": "Add docstring to test_all_fields_read_only in test_serializers.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "1adce91",
+        "message": "Add docstrings to test_serializers.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "80515c5",
+        "message": "Add docstrings to test_serializers.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "94b02a5",
+        "message": "Add docstring to test_cursor_id_must_be_uuid in test_serializers.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "4070a66",
+        "message": "Add docstring to test_invalid_uuid_rejected_actor_id in test_serializers.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "58d689c",
+        "message": "Add docstring to test_invalid_uuid_rejected_org_id in test_serializers.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "9871f50",
+        "message": "Add docstring to test_uuid_fields_validated in test_serializers.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "ea3c5c9",
+        "message": "Add docstring to test_empty_is_valid in test_serializers.py",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/benmore-backup",
+        "sha": "11e510d",
+        "message": "Add docstrings across test_ruff_check_bulk.py, test_serializers.py",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "c629a40",
+        "message": "Fire the Joined funnel step once per player, not per session",
+        "additions": 12,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "67a5bc8",
+        "message": "Add analytics instrumentation and run all gates in CI",
+        "additions": 74,
+        "deletions": 12
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "c9d3046",
+        "message": "Add README and Studio handoff checklist",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "5b388f2",
+        "message": "Add PlotRenderer scaling creatures by growth stage",
+        "additions": 131,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "5dcb40a",
+        "message": "Add client UI sending intents only",
+        "additions": 113,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "0438c9c",
+        "message": "Correct ProfileStore vendoring facts and record tooling deviations",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "0b41d94",
+        "message": "Fix Remotes type error from generalised iteration over name record",
+        "additions": 4,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "6416ab1",
+        "message": "Add server-authoritative economy with intent validation",
+        "additions": 140,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "c550cc8",
+        "message": "Add CreatureService with lazy settlement and weighted species roll",
+        "additions": 75,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "f01f56f",
+        "message": "Add centralised remotes and per-player token bucket rate limiting",
+        "additions": 85,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "3e5ca4c",
+        "message": "Add type-check gate and fix ProfileStore params typing",
+        "additions": 19430,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "228b88b",
+        "message": "Add ProfileStore-backed DataService with session locking and migration hook",
+        "additions": 2345,
+        "deletions": 1
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "31e1f36",
+        "message": "Document caller contracts for Cost.nth and Cost.totalFor",
+        "additions": 15,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "ff81db4",
+        "message": "Add earnings accrual with offline cap and anti-farm tests",
+        "additions": 85,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "7ead072",
+        "message": "Add growth stage math with clock-skew guard and tests",
+        "additions": 78,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "0530ebb",
+        "message": "Add exponential cost curve with tests",
+        "additions": 54,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "996a8ae",
+        "message": "Add shared types and pure-data balance config",
+        "additions": 100,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "89a9cfc",
+        "message": "Add Rojo project mapping and service entry points",
+        "additions": 31,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "c6752eb",
+        "message": "Fix CI: create Lune install directory before unzip",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "3a0d69e",
+        "message": "Add CI running headless Luau tests",
+        "additions": 25,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "e9e06be",
+        "message": "Add headless Lune test harness with self-verification",
+        "additions": 78,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "e6bc98f",
+        "message": "Add pinned toolchain and lint/format config",
+        "additions": 32,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "8d112b3",
+        "message": "Rename project to bergamont",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "ca62bd5",
+        "message": "Add foundation and vertical slice implementation plan",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "b089a02",
+        "message": "Fix pen-count inconsistency and pen/plot ambiguity in design spec",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "repo": "westconn24/bergamont",
+        "sha": "54f4a62",
+        "message": "Add design spec for idle creature ranch Roblox game",
+        "additions": 0,
+        "deletions": 0
+      }
+    ]
   }
 ]
