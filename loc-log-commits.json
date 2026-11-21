@@ -18139,9 +18139,39 @@
   },
   {
     "date": "2026-11-20",
-    "additions": 0,
-    "deletions": 0,
+    "additions": 4,
+    "deletions": 4,
     "net": 0,
-    "commits": []
+    "commits": [
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "4ef95e7",
+        "message": "Attribute LOC update commits to my account",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "2f79949",
+        "message": "Attribute LOC update commits to my account",
+        "additions": 2,
+        "deletions": 2
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "additions": 143,
+    "deletions": 3,
+    "net": 140,
+    "commits": [
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "7f3fe25",
+        "message": "LOC update: 2026-11-21 (1d)",
+        "additions": 143,
+        "deletions": 3
+      }
+    ]
   }
 ]
