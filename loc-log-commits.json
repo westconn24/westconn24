@@ -18573,9 +18573,9 @@
   },
   {
     "date": "2026-11-27",
-    "additions": 284,
-    "deletions": 24,
-    "net": 260,
+    "additions": 526,
+    "deletions": 27,
+    "net": 499,
     "commits": [
       {
         "repo": "westconn24/benmore-backup",
@@ -18688,6 +18688,28 @@
         "message": "LOC update: 2026-11-27 (1d)",
         "additions": 244,
         "deletions": 4
+      },
+      {
+        "repo": "westconn24/westconn24",
+        "sha": "7516c59",
+        "message": "LOC update: 2026-11-27 (1d)",
+        "additions": 242,
+        "deletions": 3
+      }
+    ]
+  },
+  {
+    "date": "2026-11-28",
+    "additions": 31,
+    "deletions": 3,
+    "net": 28,
+    "commits": [
+      {
+        "repo": "westconn24/loc-data",
+        "sha": "adec137",
+        "message": "LOC update: 2026-11-28 (1d)",
+        "additions": 31,
+        "deletions": 3
       }
     ]
   }
